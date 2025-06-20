@@ -10,6 +10,7 @@ export default {
       colors: {
         primary: "#292C62",
         hover: "#397e87",
+        active: "#397e87",
         navbar: "#F8F9FA",
         hero: "#F0F1F5",
       },

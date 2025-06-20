@@ -7,7 +7,7 @@
     @apply text-primary;
   }
   .active {
-    @apply text-hover;
+    @apply text-active;
   }
 }
 
@@ -20,6 +20,7 @@
     --navbar: #f8f9fa;
     --hero: #f0f1f5;
     --hover: #397e87;
+    --active: #397e87;
     --hover-20: #55e9fc;
   }
 
@@ -94,4 +95,37 @@ body{
   z-index: 2;
   font-weight: 700;
   display: inline-block;
+}
+
+
+
+/* Scrollbar */
+
+
+.custom-scrollbar {
+  scrollbar-width: 30px;
+  scrollbar-color: var(--primary) #fff;
+  overflow-x: hidden;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 0;
+  transition: .3s;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 10px;
+  border: 2px solid #f1f5f9;
+  transition: 0.5s;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9;
 }
