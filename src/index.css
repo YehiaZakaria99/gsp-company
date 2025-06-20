@@ -58,9 +58,29 @@ body{
 .text-bg {
   background: linear-gradient(
     270deg,
-    var(--primary) 0%,
-    var(--hover) 50%,
+    var(--hero) 0%,
+    var(--hero) 50%,
     var(--hover-20) 100%
+  );
+  -webkit-background-clip: text;
+  -o-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -o-te-webkit-text-fill-color: transparent;
+  -moz-te-webkit-text-fill-color: transparent;
+  line-height: 150%;
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  display: inline-block;
+}
+.text-bg-2 {
+  background: linear-gradient(
+    270deg,
+    var(--hover-20) 0%,
+    var(--hover-20) 50%,
+    var(--hero) 100%
   );
   -webkit-background-clip: text;
   -o-background-clip: text;
