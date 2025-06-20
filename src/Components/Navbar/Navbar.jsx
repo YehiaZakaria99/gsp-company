@@ -35,14 +35,14 @@ export default function Navbar() {
           : "bg-navbar/50 py-5 shadow-xl"
       )}
     >
-      <div className="container flex items-center justify-between px-3">
+      <div className="container flex items-center justify-between ">
         {/* Logo */}
         <NavLink to="" className="flex items-center space-x-2 z-50">
           <img src={logo} alt="Logo" className="h-10 w-auto" />
         </NavLink>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden lg:flex space-x-8">
           {navItems.map((item, index) => (
             <NavLink
               key={index}
@@ -57,7 +57,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden z-50 text-primary"
+          className="lg:hidden z-50 text-primary"
           aria-label="Toggle Menu"
         >
           {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
@@ -66,7 +66,7 @@ export default function Navbar() {
         {/* Mobile Menu */}
         <div
           className={cn(
-            "md:hidden fixed flex flex-col items-center justify-center inset-0 w-full h-screen z-40 bg-navbar transition-all duration-300 overflow-y-auto",
+            "lg:hidden fixed flex flex-col items-center justify-center inset-0 w-full h-screen z-40 bg-navbar transition-all duration-300 overflow-y-auto",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
