@@ -6,13 +6,11 @@
   .primary {
     @apply text-primary;
   }
-  .active {
-    @apply text-active;
-  }
 }
 
-
-
+.active {
+  color: var(--active);
+}
 
 @layer base {
   :root {
@@ -29,7 +27,7 @@
   }
 }
 
-body{
+body {
   height: 1000px;
 }
 
@@ -97,10 +95,7 @@ body{
   display: inline-block;
 }
 
-
-
 /* Scrollbar */
-
 
 .custom-scrollbar {
   scrollbar-width: 30px;
@@ -111,7 +106,7 @@ body{
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
   height: 0;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
