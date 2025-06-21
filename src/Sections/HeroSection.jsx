@@ -11,79 +11,82 @@ import "swiper/css/autoplay";
 
 // Framer Motion
 import { motion } from "framer-motion";
-// import { TypeAnimation } from "react-type-animation";
-// import HeroText from "./../Components/HeroText";
+import { TypeAnimation } from "react-type-animation";
+import { cn } from "../lib/utils";
+import { ArrowDown, ChevronDown } from "lucide-react";
+import { Link } from "react-scroll";
 
 export default function HeroSection() {
   const slides = [img1, img2, img3];
 
+  function handleScroll() {}
+
   return (
-    <section className="relative h-screen w-full">
-        <Swiper
-          effect={"fade"}
-          autoplay={{ delay: 3500, disableOnInteraction: false }}
-          slidesPerView={1}
-          modules={[EffectFade, Autoplay]}
-          className="h-full w-full"
-        >
-          {slides.map((bg, index) => (
-            <SwiperSlide key={index}>
-              <div
-                className="relative h-screen w-full bg-cover bg-center"
-                style={{ backgroundImage: `url(${bg})` }}
-              >
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-navbar/70 via-navbar/50 to-navbar/20 z-10" />
+    <section id="heroSection" className="relative h-screen w-full overflow-hidden">
+      <Swiper
+        effect={"fade"}
+        autoplay={{ delay: 3500, disableOnInteraction: false }}
+        slidesPerView={1}
+        modules={[EffectFade, Autoplay]}
+        className="h-full w-full"
+      >
+        {slides.map((bg, index) => (
+          <SwiperSlide key={index}>
+            <div
+              className="relative h-screen w-full bg-cover bg-center overflow-hidden"
+              style={{ backgroundImage: `url(${bg})` }}
+            >
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-navbar/70 to-primary/60 z-10" />
 
-                {/* Content */}
-                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
-                  <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.3}}
-                    className="text-primary text-4xl md:text-6xl font-extrabold tracking-wide"
-                  >
-                    GSP
-                  </motion.h1>
-                  <motion.h3
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.2, delay: 0.6 }}
-                    className="text-[#05120f] text-xl md:text-3xl mt-2 font-bold"
-                  >
-                    Expertise in construction and pipeline solutions
-                  </motion.h3>
-                  {/* <h1 className="text-bg text-4xl md:text-6xl font-extrabold tracking-wide">
+              {/* Content */}
+              <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
+                <motion.h1
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="text-primary text-3xl md:text-5xl my-8 font-extrabold tracking-wide overflow-hidden min-h-[3rem] md:min-h-[4rem]"
+                >
                   <TypeAnimation
                     sequence={[
-                      // Same substring at the start will only be typed once, initially
-                      1000,
-                      "GSP",
+                      1500,
+                      "Welcome to GSP",
+                      1500,
+                      "Gulf Seas For Pipes",
                     ]}
                     speed={75}
-                    style={{}}
+                    cursor={false}
                     repeat={Infinity}
                   />
+                </motion.h1>
 
-                </h1>
-                <h3 className="text-bg-2 text-xl md:text-3xl mt-2 font-medium">
-                  <TypeAnimation
-                    sequence={[
-                      // Same substring at the start will only be typed once, initially
-                      1000,
-                      "Gulf Seas Pipes Company",
-                    ]}
-                    speed={75}
-                    style={{}}
-                    repeat={Infinity}
-                  />
-                </h3> */}
-                  {/* <HeroText /> */}
-                </div>
+                <motion.h3
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.6 }}
+                  className="text-primary/90 text-xl md:text-3xl  font-bold overflow-hidden"
+                >
+                  Expertise in construction and pipeline solutions
+                </motion.h3>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            </div>
+            <div
+              className={cn(
+                "absolute left-1/2 transform -translate-x-1/2 bottom-8 z-40",
+              )}
+            >
+              {/* <span className="text-sm mb-2 ">Scroll</span> */}
+              <Link to="aboutSection" smooth={true} duration={0} offset={-50}>
+                {/* <ArrowDown className="h-10 w-10 text-navbar cursor-pointer"></ArrowDown> */}
+                {/* <ChevronDown className="h-10 w-10 text-navbar cursor-pointer" /> */}
+                <div className="w-6 h-10 border-2 border-navbar cursor-pointer rounded-full flex items-start justify-center p-1 mx-auto animate-bounce">
+                  <div className="w-1 h-2 bg-navbar rounded-full " />
+                </div>
+              </Link>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 }

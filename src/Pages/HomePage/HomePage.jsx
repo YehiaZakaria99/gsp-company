@@ -1,5 +1,6 @@
-import React from "react";
+// import React from "react";
 import { cn } from "../../lib/utils";
+import AboutSection from "../../Sections/AboutSection";
 import HeroSection from './../../Sections/HeroSection';
 
 export default function HomePage() {
@@ -15,6 +16,8 @@ export default function HomePage() {
         {/* HeroSection */}
         <HeroSection />
         {/* AboutSection */}
+        <AboutSection />
+        
         {/* OurSolutionsSection */}
         {/* Certificates */}
         {/* Contact Us */}

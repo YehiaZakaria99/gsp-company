@@ -17,8 +17,8 @@
     --primary: #292c62;
     --navbar: #f8f9fa;
     --hero: #f0f1f5;
-    --hover: #397e87;
-    --active: #397e87;
+    --hover: #075863;
+    --active: #075863;
     --hover-20: #55e9fc;
   }
 
@@ -28,7 +28,7 @@
 }
 
 body {
-  height: 1000px;
+  /* height: 10000px; */
 }
 
 @utility container {
@@ -96,11 +96,21 @@ body {
 
 /* Scrollbar */
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .custom-scrollbar {
   scrollbar-width: 30px;
-  scrollbar-color: var(--primary) #fff;
+  scrollbar-color: var(--primary) var(--navbar);
   overflow-x: hidden;
+  transition: .5s;
 }
+
 
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
@@ -114,12 +124,13 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #38bdf8;
+  background: var(--active);
   border-radius: 10px;
-  border: 2px solid #f1f5f9;
+  border: 2px solid var(--navbar);
   transition: 0.5s;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #0ea5e9;
+  background: var(--hover);
 }
+
