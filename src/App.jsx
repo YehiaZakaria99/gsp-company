@@ -11,6 +11,7 @@ import OurSolutionsPage from './Pages/OurSolutionsPage/OurSolutionsPage';
 import OurExperiencePage from './Pages/OurExperiencePages/OurExperiencePage';
 import GalleryPage from './Pages/GalleryPage/GalleryPage';
 import ContactPage from "./Pages/ContactPage/ContactPage";
+import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       {path: "ourExperience", element: <OurExperiencePage /> },
       {path: "gallery", element: <GalleryPage /> },
       {path: "contact", element: <ContactPage /> },
+      {path: "*", element: <NotFoundPage /> },
     ]}
   ])
   return (

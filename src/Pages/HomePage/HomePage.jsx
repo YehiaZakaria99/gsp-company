@@ -1,6 +1,7 @@
 // import React from "react";
 import { cn } from "../../lib/utils";
 import AboutSection from "../../Sections/AboutSection";
+import LeadershipSection from "../../Sections/LeadershipSection";
 import HeroSection from './../../Sections/HeroSection';
 
 export default function HomePage() {
@@ -15,6 +16,8 @@ export default function HomePage() {
       >
         {/* HeroSection */}
         <HeroSection />
+        {/* LeadershipSection */}
+        <LeadershipSection />
         {/* AboutSection */}
         <AboutSection />
         

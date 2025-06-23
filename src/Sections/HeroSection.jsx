@@ -77,7 +77,7 @@ export default function HeroSection() {
                 "absolute left-1/2 transform -translate-x-1/2 bottom-8 z-40"
               )}
             >
-              <Link to="aboutSection" smooth={true} duration={0} offset={-50}>
+              <Link to="leadershipSection" smooth={true} duration={0} offset={-50}>
                 <div className="w-6 h-10 border-2 border-navbar cursor-pointer rounded-full flex items-start justify-center p-1 mx-auto animate-bounce">
                   <div className="w-1 h-2 bg-navbar rounded-full " />
                 </div>
