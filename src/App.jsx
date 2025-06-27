@@ -5,35 +5,42 @@ import "./App.css";
 import HomePage from "./Pages/HomePage/HomePage";
 import Navbar from "./Components/Navbar/Navbar";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import Layout from './Pages/LayoutPage/Layout';
-import AboutPage from './Pages/AboutPages/AboutPage';
-import OurSolutionsPage from './Pages/OurSolutionsPage/OurSolutionsPage';
-import OurExperiencePage from './Pages/OurExperiencePages/OurExperiencePage';
-import GalleryPage from './Pages/GalleryPage/GalleryPage';
+import Layout from "./Pages/LayoutPage/Layout";
+import AboutPage from "./Pages/AboutPages/AboutPage";
+import OurSolutionsPage from "./Pages/OurSolutionsPage/OurSolutionsPage";
+import OurExperiencePage from "./Pages/OurExperiencePages/OurExperiencePage";
+import GalleryPage from "./Pages/GalleryPage/GalleryPage";
 import ContactPage from "./Pages/ContactPage/ContactPage";
-import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
+import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 import GSPIntroduction from "./Pages/AboutPages/GSPIntroduction";
-
+import GSPInformation from "./Pages/AboutPages/GSPInformation";
 
 function App() {
   const routers = createBrowserRouter([
-    {path: "", element: <Layout /> , children: [
-      {index: true, element: <HomePage /> },
-      {path: "about/gsp-introduction", element: <AboutPage /> , children:[
-        {index: true, element: <GSPIntroduction />}
-      ] },
-      {path: "ourSolutions", element: <OurSolutionsPage /> },
-      {path: "ourExperience", element: <OurExperiencePage /> },
-      {path: "gallery", element: <GalleryPage /> },
-      {path: "contact", element: <ContactPage /> },
-      {path: "*", element: <NotFoundPage /> },
-    ]}
-  ])
+    {
+      path: "",
+      element: <Layout />,
+      children: [
+        { index: true, element: <HomePage /> },
+        {
+          path: "about",
+          element: <AboutPage />,
+          children: [
+            { path: "/about/gsp-introduction", element: <GSPIntroduction /> },
+            { path: "/about/gsp-information", element: <GSPInformation /> },
+          ],
+        },
+        { path: "ourSolutions", element: <OurSolutionsPage /> },
+        { path: "ourExperience", element: <OurExperiencePage /> },
+        { path: "gallery", element: <GalleryPage /> },
+        { path: "contact", element: <ContactPage /> },
+        { path: "*", element: <NotFoundPage /> },
+      ],
+    },
+  ]);
   return (
     <>
-      
-      <RouterProvider router={routers}  />
-
+      <RouterProvider router={routers} />
     </>
   );
 }
