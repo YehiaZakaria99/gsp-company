@@ -6,8 +6,11 @@
   .primary {
     @apply text-primary;
   }
-  .bg-sec{
+  .bg-sec {
     @apply bg-primary/10 from-primary/40  to-primary;
+  }
+  .aboutLinksStyle{
+    @apply block px-4 py-2  font-bold text-primary hover:text-hover transition-all duration-300;
   }
 }
 
@@ -28,10 +31,6 @@
   html {
     @apply scroll-smooth;
   }
-}
-
-body {
-  /* height: 10000px; */
 }
 
 @utility container {
@@ -111,9 +110,8 @@ body {
   scrollbar-width: 30px;
   scrollbar-color: var(--primary) var(--navbar);
   overflow-x: hidden;
-  transition: .5s;
+  transition: 0.5s;
 }
-
 
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
@@ -136,4 +134,3 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: var(--hover);
 }
-

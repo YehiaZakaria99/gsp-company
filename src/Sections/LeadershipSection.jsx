@@ -1,28 +1,21 @@
 import React from "react";
+import { cn } from "../lib/utils";
+import img1 from "/HomePage/AboutSection/img1.webp";
 
 export default function LeadershipSection() {
   return (
     <>
-      <section
-        id="leadershipSection"
-        className="py-16 bg-sec"
-      >
-        {/* // className="h-screen  bg-gradient-to-b from-primary/40  to-primary overflow-hidden" */}
+      <section id="leadershipSection" className="py-16 bg-sec">
         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-10 ">
           {/* // { Left - ImagesorVideo } */}
           <div className="w-full lg:w-1/2 space-y-4">
             <div className="relative rounded-xl overflow-hidden shadow-lg">
               <img
-                src="/assets/img/about-excavator.jpg"
+                src={img1}
                 alt=""
-                className="w-full object-cover h-[250px]"
+                className="w-full object-center object-cover h-[250px]"
               />
-              {/* // { PlayButtonOverlay } */}
-              <button className="absolute inset-0 flex items-center justify-center bg-black/30">
-                <div className="bg-primary p-4 rounded-full">
-                  {/* // <svg>...</svg> { Add a play icon here } */}
-                </div>
-              </button>
+
             </div>
 
             <p className="text-4xl font-bold text-primary">
@@ -42,6 +35,7 @@ export default function LeadershipSection() {
               “The key to the Group’s sustainable success is encouraging
               leadership at all levels...
             </p>
+
             {/* // {Highlights} */}
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-center gap-2">
@@ -57,14 +51,21 @@ export default function LeadershipSection() {
                 <span className="text-primary">➤</span> Continuously Innovate
               </li>
             </ul>
+
             {/* // { CTAButton } */}
             <a
               href="#/about/chairman-message"
-              className="inline-block mt-4 px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition"
+              className={cn(
+                "inline-block mt-4 px-6 py-2 bg-primary/80 text-white rounded-lg",
+                "hover:bg-primary transition-all duration-300"
+              )}
             >
               Read Chairman’s Message
             </a>
+
             {/* // { Signature } */}
+
+            {/* Chairman */}
             <div className="flex items-center gap-4 mt-6">
               <img
                 src="/assets/img/chairman.jpg"
@@ -76,19 +77,27 @@ export default function LeadershipSection() {
                 <p className="text-xs text-gray-500">Chairman of Company</p>
               </div>
             </div>
+
+            {/* Executive Director */}
+            <div className="flex items-center gap-4 mt-6">
+              <img
+                src="/assets/img/chairman.jpg"
+                alt="Executive Director"
+                className="w-12 h-12 rounded-full"
+              />
+              <div>
+                <p className="font-semibold text-sm">Mutaeb AlHajri</p>
+                <p className="text-xs text-gray-500">Executive Director</p>
+              </div>
+            </div>
+
+
           </div>
         </div>
       </section>
     </>
   );
 }
-
-
-
-
-
-
-
 
 /* 
 
@@ -141,7 +150,17 @@ export default function LeadershipSection() {
   </div>
 </section>
 
-*/
+
+
+
+              {/* // { PlayButtonOverlay } */
+              // <button className="absolute inset-0 flex items-center justify-center bg-black/30">
+              //   <div className="bg-primary p-4 rounded-full">
+              //     <svg>...</svg> { Add a play icon here }
+              //   </div>
+              // </button>
+
+
 
 /* 
 

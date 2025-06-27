@@ -12,13 +12,16 @@ import OurExperiencePage from './Pages/OurExperiencePages/OurExperiencePage';
 import GalleryPage from './Pages/GalleryPage/GalleryPage';
 import ContactPage from "./Pages/ContactPage/ContactPage";
 import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
+import GSPIntroduction from "./Pages/AboutPages/GSPIntroduction";
 
 
 function App() {
   const routers = createBrowserRouter([
     {path: "", element: <Layout /> , children: [
       {index: true, element: <HomePage /> },
-      {path: "about", element: <AboutPage />},
+      {path: "about/gsp-introduction", element: <AboutPage /> , children:[
+        {index: true, element: <GSPIntroduction />}
+      ] },
       {path: "ourSolutions", element: <OurSolutionsPage /> },
       {path: "ourExperience", element: <OurExperiencePage /> },
       {path: "gallery", element: <GalleryPage /> },
