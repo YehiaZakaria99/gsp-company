@@ -1,0 +1,26 @@
+{
+  "name": "Mohammed Al Qahtani",
+  "title": "Chairman",
+  "children": [
+    {
+      "name": "Alaa Al Eissa",
+      "title": "Executive Secretary"
+    },
+    {
+      "name": "Mutaeb Al Hajri",
+      "title": "Executive Director",
+      "children": [
+        {
+          "name": "Abdul Rahman Khan",
+          "title": "Project Manager",
+          "children": [
+            {
+              "name": "Rafaqat Ali",
+              "title": "Construction Manager"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -53,9 +53,9 @@ export default function Navbar() {
             : "bg-navbar md:bg-navbar/50 py-5 shadow-xl"
         )}
       >
-        <div className="container flex items-center justify-between ">
+        <div className="container flex items-center justify-between flex-wrap">
           {/* Logo */}
-          <NavLink to="" className="flex items-center space-x-2 z-50">
+          <NavLink to="" className="flex items-center space-x-2 z-50 ">
             <img src={logo} alt="Logo" className="h-10 w-auto" />
           </NavLink>
 
@@ -89,10 +89,10 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden z-50 text-primary"
+            className="lg:hidden z-50 text-primary mx-auto xs:mx-0"
             aria-label="Toggle Menu"
           >
-            {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
+            {isMenuOpen ? <X size={30} /> : <Menu size={30} />}
           </button>
         </div>
         <NavbarMobile

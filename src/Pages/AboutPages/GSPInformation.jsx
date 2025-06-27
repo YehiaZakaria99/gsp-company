@@ -1,5 +1,5 @@
 import img1 from "/AboutPage/gsp-information/scan-me.webp";
-import { cn } from './../../lib/utils';
+import { cn } from "./../../lib/utils";
 
 const infoData = [
   { "Company Name ": " Gulf Seas For Pipes. (GSP)" },
@@ -19,8 +19,8 @@ export default function GSPInformation() {
         <div className="absolute w-96 h-96 bg-white/10 rounded-full -top-20 -left-20 blur-3xl opacity-30"></div>
         <div className="absolute w-72 h-72 bg-white/5 rounded-full -bottom-10 -right-10 blur-2xl opacity-20"></div>
 
-        <div className="container">
-          <div className="flex flex-col-reverse md:flex-row justify-between items-center px-6 md:px-16 gap-10">
+        <div className="container md:px-0">
+          <div className="flex flex-col-reverse md:flex-row justify-between items-center px-2 md:px-16 gap-10">
             {/* Text Section */}
             <div
               className="md:w-1/2 text-white space-y-6"
@@ -35,23 +35,29 @@ export default function GSPInformation() {
                   <li
                     key={infoKey}
                     className={cn(
-                        "bg-white/50 p-4 rounded-lg shadow-lg backdrop-blur-sm border border-white/20",
-                        "transition-all duration-500 ",
-                        "group hover:bg-white"
+                      "bg-white/50 p-4 rounded-lg shadow-lg backdrop-blur-sm border border-white/20",
+                      "transition-all duration-500 ",
+                      "group hover:bg-white"
                     )}
                   >
                     {Object.entries(infoObj).map(([key, value], i) => (
                       <div key={i} className="flex flex-col gap-1">
-                        <span className={cn(
+                        <span
+                          className={cn(
                             "text-lg text-primary/80 font-bold",
                             "transition-all duration-300",
                             "group-hover:text-primary"
-                        )}>{key}</span>
-                        <span className={cn(
+                          )}
+                        >
+                          {key}
+                        </span>
+                        <span
+                          className={cn(
                             "text-xl font-semibold text-white",
                             "transition-all duration-300",
                             "group-hover:text-primary/80"
-                            )}>
+                          )}
+                        >
                           {value}
                         </span>
                       </div>
@@ -68,7 +74,7 @@ export default function GSPInformation() {
               data-aos-delay="500"
             >
               <img
-                className="w-full h-full object-cover grayscale-[80%] hover:grayscale-0 transition duration-500 relative z-20"
+                className="min-w-80 w-full h-full object-cover grayscale-[80%] hover:grayscale-0 transition duration-500 relative z-20"
                 src={img1}
                 alt="Scan QR"
               />

@@ -32,7 +32,7 @@ export default function NavbarMobile({ navItems, isMenuOpen, setIsMenuOpen }) {
       {/* Mobile Menu */}
       <div
         className={cn(
-          "md:hidden ease-in-out  text-white px-5 rounded-md",
+          "lg:hidden ease-in-out  text-white px-5 rounded-md",
           isMenuOpen
             ? "max-h-[1000px] opacity-100 py-4 pointer-events-auto"
             : "max-h-0 opacity-0 py-0 pointer-events-none",
@@ -56,7 +56,7 @@ export default function NavbarMobile({ navItems, isMenuOpen, setIsMenuOpen }) {
                 <NavLink
                   key={index}
                   to={item.to}
-                  className="hover:text-hover transition duration-300 py-2 block"
+                  className="hover:text-hover transition duration-300 py-4 block"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

@@ -13,9 +13,12 @@ export default {
         active: "#075863",
         navbar: "#F8F9FA",
         hero: "#F0F1F5",
-
+      },
+      screens: {
+        xs: "400px",
       },
     },
   },
+
   plugins: [],
 };
