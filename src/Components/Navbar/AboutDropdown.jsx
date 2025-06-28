@@ -7,6 +7,7 @@ export default function AboutDropdown({
   ref,
   state,
   setState,
+  setIsMenuOpen,
   item,
   isMobile,
 }) {
@@ -24,13 +25,18 @@ export default function AboutDropdown({
     };
   }, []);
 
+  function handleClick() {
+    setState(false);
+    setIsMenuOpen(false);
+  }
+
   return (
     <>
       <div ref={ref} className={cn("relative")}>
         <button
           onClick={() => setState((prev) => !prev)}
           className={cn(
-            "text-primary text-lg font-bold ",
+            "text-primary text-lg font-bold my-2 lg:my-0",
             "inline-flex items-center",
             "hover:text-hover transition-colors duration-300"
           )}
@@ -48,7 +54,7 @@ export default function AboutDropdown({
           <div
             className={cn(
               isMobile
-                ? "pl-4"
+                ? ""
                 : "absolute top-10 -left-1/2 bg-white z-50 min-w-[200px] ",
               "transition-all duration-300 shadow-2xl rounded-lg py-2",
               state
@@ -62,7 +68,7 @@ export default function AboutDropdown({
                 key={subIndex}
                 to={subItem.to}
                 onClick={() => {
-                  setState(false);
+                  handleClick();
                 }}
                 className={cn(
                   isMobile ? "text-sm" : "text-md ",

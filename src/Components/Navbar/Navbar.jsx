@@ -50,7 +50,7 @@ export default function Navbar() {
           "fixed top-0 left-0 w-full z-50 transition-all duration-300",
           isScrolled
             ? "bg-navbar backdrop-blur-md shadow-md py-3"
-            : "bg-navbar md:bg-navbar/50 py-5 shadow-xl"
+            : "bg-navbar lg:bg-navbar/50 py-5 shadow-xl"
         )}
       >
         <div className="container flex items-center justify-between flex-wrap">
@@ -69,6 +69,7 @@ export default function Navbar() {
                       ref={aboutMenuRef}
                       state={isAboutDropdownOpen}
                       setState={setIsAboutDropdownOpen}
+                      setIsMenuOpen = {setIsMenuOpen}
                       item={item}
                       isMobile={false}
                     />
@@ -92,7 +93,7 @@ export default function Navbar() {
             className="lg:hidden z-50 text-primary mx-auto xs:mx-0"
             aria-label="Toggle Menu"
           >
-            {isMenuOpen ? <X size={30} /> : <Menu size={30} />}
+            {isMenuOpen ? <X size={40} /> : <Menu size={40} />}
           </button>
         </div>
         <NavbarMobile

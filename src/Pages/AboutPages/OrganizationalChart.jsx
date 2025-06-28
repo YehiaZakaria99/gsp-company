@@ -21,13 +21,13 @@ export default function OrganizationalChart() {
       label={
         <div
           className={cn(
-            "text-primary bg-white border-2 border-primary text-center",
+            "text-white bg-primary border-2 border-white text-center",
             "rounded-full px-3 py-1.5 md:px-4 md:py-2",
             "text-xs md:text-sm shadow-sm transition-transform duration-300 hover:scale-105 hover:shadow-xl"
           )}
         >
           {node.name}
-          <div className="text-[10px] md:text-xs text-gray-500">
+          <div className="text-[10px] md:text-xs text-white/80">
             {node.title}
           </div>
         </div>
@@ -42,7 +42,7 @@ export default function OrganizationalChart() {
     <section
       className={cn(
         "organizational-chart min-h-screen  py-24 relative overflow-hidden",
-        "bg-gradient-to-br from-primary via-primary/90 to-primary/60"
+        "bg-white"
       )}
     >
       {/* overlay */}
@@ -52,14 +52,14 @@ export default function OrganizationalChart() {
 
       <div className="container flex flex-col items-center justify-center gap-10 py-16 px-4">
         <div
-          className=" text-white space-y-6 w-full text-center "
+          className="  space-y-6 w-full text-center "
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-0 text-white border-b-2 border-white/20 inline-block pb-2">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-0 text-primary border-b-2 border-white/20 inline-block pb-2">
             Organizational Chart
           </h2>
-          <p className="text-white/80 text-sm md:text-base max-w-md mx-auto ">
+          <p className="text-primary/80 text-sm md:text-base font-bold max-w-md mx-auto ">
             Explore our structure and meet the amazing team leading our company.
           </p>
         </div>
@@ -74,13 +74,13 @@ export default function OrganizationalChart() {
               label={
                 <div
                   className={cn(
-                    "text-primary font-bold bg-white border-2 border-primary text-center",
+                    "text-white font-bold bg-primary border-2 border-white text-center",
                     "rounded-full px-4 py-2 md:px-6 md:py-2",
                     "text-sm md:text-base shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                   )}
                 >
                   {chartData.name}
-                  <div className="text-xs font-medium text-gray-500">
+                  <div className="text-xs font-medium text-white/80">
                     {chartData.title}
                   </div>
                 </div>
