@@ -1,9 +1,10 @@
 import Slider from "react-slick";
 // images
-import mainImg from "/AboutPage/gsp-introduction/introduction.jpeg";
-import img1 from "/AboutPage/gsp-introduction/img1.jpeg";
+import mainImg from "/AboutPage/gsp-introduction/introduction.webp";
 import pipeImg from "/AboutPage/gsp-introduction/pipelines-solutions.webp";
 import teamImg from "/AboutPage/gsp-introduction/team.webp";
+import img3 from "/AboutPage/gsp-introduction/img3.webp";
+import img4 from "/AboutPage/gsp-introduction/img4.webp";
 
 export default function GSPIntroduction() {
   const introData = [
@@ -18,12 +19,12 @@ export default function GSPIntroduction() {
       p: `GSP is backed by professional team of qualified and well experienced staff and fleet of company owned tools and equipment,we are fully competent to efficiently undertake EPC projects from initial planning to turnover and commissioning.`,
     },
     {
-      img: img1,
+      img: img3,
       h2: "",
       p: `GSP is capable of earthworks, civil works, electrical works, mechanical works, road works, including construction of drilling well pads, reservoirs, waste disposal ponds with provision of HDPE plastic lining works. At GSP, we utilize many modern techniques of construction, scheduling and cost controlling with effective quality & safety to ensuretargets are met within the client budget.`,
     },
     {
-      img: img1,
+      img: img4,
       h2: "",
       p: `Our key personnel are PMP certified and quality of our work man ship is kept at a high standard by appointing the right person for the project and constant collaboration with the client's representative.Currently our employee count is (272) and we have sufficient available block visas for immediate employment from any country of origin.
 
