@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import img1 from "/HomePage/HeroSection/1.jpg";
+import img1 from "/HomePage/HeroSection/1.webp";
 import img2 from "/HomePage/HeroSection/2.webp";
 import img3 from "/HomePage/HeroSection/3.webp";
-import img4 from "/HomePage/HeroSection/4.jpeg";
+import img4 from "/HomePage/HeroSection/4.webp";
 
 import { cn } from "../lib/utils";
 import { Link } from "react-scroll";
