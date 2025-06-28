@@ -7,6 +7,7 @@ import {
   Users2,
 } from "lucide-react";
 import { NavLink } from "react-router";
+import { cn } from "../lib/utils";
 
 
 
@@ -42,7 +43,7 @@ export default function AboutSection() {
 
   return (
     <>
-      <section className="py-20 bg-sec ">
+      <section className="py-20 bg-white ">
         <div className="container mx-auto px-4 text-center">
           {/* <h2 className="text-3xl font-bold mb-10">Explore About GSP</h2> */}
           <h3 className="font-bold text-3xl text-primary text-center">
@@ -58,10 +59,14 @@ export default function AboutSection() {
               <NavLink
                 key={key}
                 to={section.to}
-                className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex flex-col items-center gap-3"
+                className={cn(
+                  " p-6 rounded-xl  transition flex flex-col items-center gap-3 border ",
+                  "shadow-md shadow-primary/70",
+                  "special-style"
+                )}
               >
-                <div className="text-primary text-4xl">{section.icon}</div>
-                <h3 className="text-lg font-semibold">{section.title}</h3>
+                <div className=" text-4xl">{section.icon}</div>
+                <h3 className="text-lg font-bold ">{section.title}</h3>
               </NavLink>
             ))}
           </div>

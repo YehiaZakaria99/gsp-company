@@ -5,7 +5,7 @@ import img1 from "/HomePage/AboutSection/img1.webp";
 export default function LeadershipSection() {
   return (
     <>
-      <section id="leadershipSection" className="py-16 bg-sec">
+      <section id="leadershipSection" className="py-16 bg-white">
         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-10 ">
           {/* // { Left - ImagesorVideo } */}
           <div className="w-full lg:w-1/2 space-y-4">
@@ -56,8 +56,8 @@ export default function LeadershipSection() {
             <a
               href="#/about/chairman-message"
               className={cn(
-                "inline-block mt-4 px-6 py-2 bg-primary/80 text-white rounded-lg",
-                "hover:bg-primary transition-all duration-300"
+                "inline-block font-semibold mt-4 px-6 py-2  rounded-lg",
+                "special-style"
               )}
             >
               Read Chairman’s Message
