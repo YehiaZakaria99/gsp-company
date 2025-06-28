@@ -70,7 +70,7 @@ export default function GSPIntroduction() {
         <Slider {...settings} className="space-y-4">
           {introData.map(({ h2, p, img }, key) => (
             <div key={key}>
-              <div className="transition-all duration-1000 ease-in-out px-4 py-10 bg-white rounded-2xl shadow-xl flex flex-col md:flex-row items-center gap-6">
+              <div className="transition-all duration-1000 ease-in-out px-4 py-8 bg-white rounded-2xl shadow-xl flex flex-col md:flex-row items-center gap-6">
                 <img
                   src={img}
                   alt="GSP Slide"
