@@ -49,7 +49,7 @@ const COLORS = [
 
 export default function OurManPower() {
   const topManpower = manpowerData
-    .sort((a, b) =>  b.total - a.total )
+    .sort((a, b) => b.total - a.total)
     .slice(0, 6);
 
   return (
@@ -64,6 +64,10 @@ export default function OurManPower() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg">
               Our Man Power
             </h1>
+
+            <p className="text-white/90 text-lg md:text-xl max-w-md font-semibold">
+              Showcasing the scale and expertise of our manpower resources.
+            </p>
           </div>
         </div>
 
@@ -87,7 +91,9 @@ export default function OurManPower() {
                     >
                       <td className="px-4 py-3 font-medium">{index + 1}</td>
                       <td className="px-4 py-3">{item.description}</td>
-                      <td className="px-4 py-3 font-semibold text-right">{item.total}</td>
+                      <td className="px-4 py-3 font-semibold text-right">
+                        {item.total}
+                      </td>
                     </tr>
                   ))}
                   <tr className="bg-primary/10 font-bold">
@@ -106,7 +112,7 @@ export default function OurManPower() {
                 Top 6 Roles by Manpower
               </h2>
               <div className="w-full h-80 ">
-                <ResponsiveContainer  width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
                     <Pie
                       data={topManpower}
