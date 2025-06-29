@@ -48,7 +48,7 @@ export default function GSPIntroduction() {
   };
 
   return (
-    <section className="bg-primary/20 py-24 pt-20">
+    <section className="introduction bg-primary/20 py-24 pt-20">
       {/* Title + Image */}
       <div
         className="relative px-6 md:px-16 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 bg-cover h-[300px] md:h-[450px] lg:h-[500px] bg-fixed bg-bottom  shadow-xl overflow-hidden"

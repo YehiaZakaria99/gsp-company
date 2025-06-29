@@ -15,6 +15,7 @@ import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 import GSPIntroduction from "./Pages/AboutPages/GSPIntroduction";
 import GSPInformation from "./Pages/AboutPages/GSPInformation";
 import OrganizationalChart from "./Pages/AboutPages/OrganizationalChart";
+import OurManPower from "./Pages/AboutPages/OurManPower";
 
 function App() {
   const routers = createBrowserRouter([
@@ -30,6 +31,7 @@ function App() {
             { path: "/about/gsp-introduction", element: <GSPIntroduction /> },
             { path: "/about/gsp-information", element: <GSPInformation /> },
             { path: "/about/organizational-chart", element: <OrganizationalChart /> },
+            { path: "/about/our-man-power", element: <OurManPower /> },
           ],
         },
         { path: "ourSolutions", element: <OurSolutionsPage /> },
