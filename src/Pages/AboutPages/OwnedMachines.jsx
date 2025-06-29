@@ -1,5 +1,5 @@
 import React from "react";
-import mainImg from "/AboutPage/our-man-power/team.webp";
+import mainImg from "/AboutPage/owned-machines/img.webp";
 import {
   PieChart,
   Pie,
@@ -10,28 +10,19 @@ import {
 } from "recharts";
 
 const manpowerData = [
-  { description: "Managing Director", total: 1 },
-  { description: "General Management", total: 4 },
-  { description: "Electrical Engineer", total: 6 },
-  { description: "Mechanical Engineer", total: 10 },
-  { description: "Civil Engineer", total: 10 },
-  { description: "MEP Engineer", total: 4 },
-  { description: "HVAC Engineer", total: 2 },
-  { description: "HVAC Supervisor", total: 4 },
-  { description: "AC Technicians", total: 15 },
-  { description: "HVAC Technicians", total: 12 },
-  { description: "Administrative", total: 6 },
-  { description: "Accountant", total: 5 },
-  { description: "Purchasing Dept", total: 5 },
-  { description: "Instrumentation Engineer", total: 4 },
-  { description: "Foreman", total: 17 },
-  { description: "Technician", total: 26 },
-  { description: "Electrician", total: 22 },
-  { description: "Non-skilled & Common Labor", total: 50 },
-  { description: "Masons", total: 8 },
-  { description: "Mechanic Helper", total: 8 },
-  { description: "Mechanic", total: 11 },
-  { description: "Driver & Heavy Equipment Operator", total: 75 },
+  { description: "Concrete Mixers (Truck 8 m3)", quantity: 1 },
+  { description: "Water Tankers", quantity: 4 },
+  { description: "Asphalt Cutters", quantity: 2 },
+  { description: "Roller", quantity: 4 },
+  { description: "Civil Engineer", quantity: 1 },
+  { description: "Cranes", quantity: 1 },
+  { description: "Loader", quantity: 8 },
+  { description: "Forklift (1, 3 Tons)", quantity: 2 },
+  { description: "Trailers (Dumpers, Low Bed, Standard)", quantity: 40 },
+  { description: "Small Cars", quantity: 12 },
+  { description: "Pick Ups", quantity: 22 },
+  { description: "Dyna Trucks", quantity: 6 },
+  { description: "Buses", quantity: 2 },
 ];
 
 const COLORS = [
@@ -47,17 +38,9 @@ const COLORS = [
   "#0097A7",
 ];
 
-export default function OurManPower() {
-  let total = 0;
-  function calcTotal() {
-    manpowerData.forEach((man) => (total += +man.total));
-    // console.log(total);
-
-    return total;
-  }
-  calcTotal();
+export default function OwnedMachines() {
   const topManpower = manpowerData
-    .sort((a, b) => b.total - a.total)
+    .sort((a, b) => b.quantity - a.quantity)
     .slice(0, 6);
 
   return (
@@ -70,11 +53,11 @@ export default function OurManPower() {
           <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-black/60 to-primary/80 z-10" />
           <div className="md:w-1/2 space-y-4 z-20 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg">
-              Our Man Power
+              Owned Machines
             </h1>
 
             <p className="text-white/90 text-lg md:text-xl max-w-md font-semibold">
-              Showcasing the scale and expertise of our manpower resources.
+              Showcasing the scale and expertise of our owned machines.
             </p>
           </div>
         </div>
@@ -88,7 +71,7 @@ export default function OurManPower() {
                   <tr>
                     <th className="px-4 py-3">#</th>
                     <th className="px-4 py-3">Description</th>
-                    <th className="px-4 py-3">Total</th>
+                    <th className="px-4 py-3">Quantity</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-primary/20 text-primary">
@@ -100,16 +83,16 @@ export default function OurManPower() {
                       <td className="px-4 py-3 font-medium">{index + 1}</td>
                       <td className="px-4 py-3">{item.description}</td>
                       <td className="px-4 py-3 font-semibold text-right">
-                        {item.total}
+                        {item.quantity}
                       </td>
                     </tr>
                   ))}
-                  <tr className="bg-primary/10 font-bold">
+                  {/* <tr className="bg-primary/10 font-bold">
                     <td className="px-4 py-3" colSpan="2">
                       Total
                     </td>
-                    <td className="px-4 py-3 text-right">{total}</td>
-                  </tr>
+                    <td className="px-4 py-3 text-right">305</td>
+                  </tr> */}
                 </tbody>
               </table>
             </div>
@@ -124,7 +107,7 @@ export default function OurManPower() {
                   <PieChart>
                     <Pie
                       data={topManpower}
-                      dataKey="total"
+                      dataKey="quantity"
                       nameKey="description"
                       cx="50%"
                       cy="50%"
