@@ -9,30 +9,9 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const manpowerData = [
-  { description: "Managing Director", total: 1 },
-  { description: "General Management", total: 4 },
-  { description: "Electrical Engineer", total: 6 },
-  { description: "Mechanical Engineer", total: 10 },
-  { description: "Civil Engineer", total: 10 },
-  { description: "MEP Engineer", total: 4 },
-  { description: "HVAC Engineer", total: 2 },
-  { description: "HVAC Supervisor", total: 4 },
-  { description: "AC Technicians", total: 15 },
-  { description: "HVAC Technicians", total: 12 },
-  { description: "Administrative", total: 6 },
-  { description: "Accountant", total: 5 },
-  { description: "Purchasing Dept", total: 5 },
-  { description: "Instrumentation Engineer", total: 4 },
-  { description: "Foreman", total: 17 },
-  { description: "Technician", total: 26 },
-  { description: "Electrician", total: 22 },
-  { description: "Non-skilled & Common Labor", total: 50 },
-  { description: "Masons", total: 8 },
-  { description: "Mechanic Helper", total: 8 },
-  { description: "Mechanic", total: 11 },
-  { description: "Driver & Heavy Equipment Operator", total: 75 },
-];
+import ourManPowerData from "../../Data/manPowerData.json";
+
+const { manpowerData } = ourManPowerData;
 
 const COLORS = [
   "#292C62",
@@ -51,8 +30,6 @@ export default function OurManPower() {
   let total = 0;
   function calcTotal() {
     manpowerData.forEach((man) => (total += +man.total));
-    // console.log(total);
-
     return total;
   }
   calcTotal();

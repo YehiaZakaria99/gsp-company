@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Tree, TreeNode } from "react-organizational-chart";
-import chartData from "../../Data/organizationalChart.json";
+import chartData from "../../Data/chartData.json";
 import { cn } from "../../lib/utils";
 
 export default function OrganizationalChart() {

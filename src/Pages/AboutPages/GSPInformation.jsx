@@ -1,16 +1,9 @@
 import img1 from "/AboutPage/gsp-information/scan-me.webp";
 import { cn } from "./../../lib/utils";
 
-const infoData = [
-  { "Company Name": "Gulf Seas For Pipes. (GSP)" },
-  { "Commercial Registration No. (CR)": "2051174064" },
-  { "Value Added Tax No.": "310229334300003" },
-  { "Aramco Vendor No.": "10108180" },
-  {
-    Address:
-      "P.O.BOX 3086, Al Bandariyah Tower - A, Office -105, Al Khobar 31952, Kingdom of Saudi Arabia",
-  },
-];
+import informationData from "../../Data/informationData.json";
+
+const { infoData } = informationData;
 
 export default function GSPInformation() {
   return (

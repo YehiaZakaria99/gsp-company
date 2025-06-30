@@ -9,19 +9,9 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const manpowerData = [
-  { description: "Concrete Mixers (Truck 8 m3)", quantity: 1 },
-  { description: "Water Tankers", quantity: 4 },
-  { description: "Asphalt Cutters", quantity: 2 },
-  { description: "Roller", quantity: 4 },
-  { description: "Loader", quantity: 8 },
-  { description: "Forklift (1, 3 Tons)", quantity: 2 },
-  { description: "Trailers (Dumpers, Low Bed, Standard)", quantity: 40 },
-  { description: "Small Cars", quantity: 12 },
-  { description: "Pick Ups", quantity: 22 },
-  { description: "Dyna Trucks", quantity: 6 },
-  { description: "Buses", quantity: 2 },
-];
+import machinesData from "../../Data/machinesData.json";
+
+const { ownedMachines } = machinesData;
 
 const COLORS = [
   "#292C62",
@@ -37,7 +27,7 @@ const COLORS = [
 ];
 
 export default function OwnedMachines() {
-  const topManpower = manpowerData
+  const topMachines = ownedMachines
     .sort((a, b) => b.quantity - a.quantity)
     .slice(0, 6);
 
@@ -73,7 +63,7 @@ export default function OwnedMachines() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-primary/20 text-primary">
-                  {manpowerData.reverse().map((item, index) => (
+                  {ownedMachines.reverse().map((item, index) => (
                     <tr
                       key={index}
                       className="hover:bg-primary/10 transition duration-300"
@@ -85,12 +75,6 @@ export default function OwnedMachines() {
                       </td>
                     </tr>
                   ))}
-                  {/* <tr className="bg-primary/10 font-bold">
-                    <td className="px-4 py-3" colSpan="2">
-                      Total
-                    </td>
-                    <td className="px-4 py-3 text-right">305</td>
-                  </tr> */}
                 </tbody>
               </table>
             </div>
@@ -98,13 +82,13 @@ export default function OwnedMachines() {
             {/* Pie Chart Section */}
             <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-center overflow-auto">
               <h2 className="text-xl font-bold mb-4 text-primary">
-                Top 6 Roles by Manpower
+                Top 6 Roles by Machines
               </h2>
               <div className="w-full h-80 ">
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
                     <Pie
-                      data={topManpower}
+                      data={topMachines}
                       dataKey="quantity"
                       nameKey="description"
                       cx="50%"
@@ -113,7 +97,7 @@ export default function OwnedMachines() {
                       fill="#8884d8"
                       label
                     >
-                      {topManpower.map((entry, index) => (
+                      {topMachines.map((entry, index) => (
                         <Cell
                           key={`cell-${index}`}
                           fill={COLORS[index % COLORS.length]}
