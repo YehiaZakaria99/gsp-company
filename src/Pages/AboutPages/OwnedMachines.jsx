@@ -14,8 +14,6 @@ const manpowerData = [
   { description: "Water Tankers", quantity: 4 },
   { description: "Asphalt Cutters", quantity: 2 },
   { description: "Roller", quantity: 4 },
-  { description: "Civil Engineer", quantity: 1 },
-  { description: "Cranes", quantity: 1 },
   { description: "Loader", quantity: 8 },
   { description: "Forklift (1, 3 Tons)", quantity: 2 },
   { description: "Trailers (Dumpers, Low Bed, Standard)", quantity: 40 },
