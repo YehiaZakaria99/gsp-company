@@ -79,7 +79,7 @@ export default function HeroSection() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.6 }}
-                  className="text-primary/90 text-xl md:text-3xl font-bold overflow-hidden"
+                  className="text-primary/80 text-xl md:text-3xl font-semibold overflow-hidden"
                 >
                   Expertise in construction and pipeline solutions
                 </motion.h3>
