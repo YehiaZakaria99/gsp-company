@@ -82,7 +82,7 @@ export default function OwnedMachines() {
             {/* Pie Chart Section */}
             <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-center overflow-auto">
               <h2 className="text-xl font-bold mb-4 text-primary">
-                Top 6 Roles by Machines
+                Top 6 Quantities by Machines
               </h2>
               <div className="w-full h-80 ">
                 <ResponsiveContainer width="100%" height="100%">
