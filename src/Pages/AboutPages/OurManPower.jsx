@@ -64,8 +64,9 @@ export default function OurManPower() {
                 <thead className="bg-primary text-white">
                   <tr>
                     <th className="px-4 py-3">#</th>
-                    <th className="px-4 py-3">Description</th>
-                    <th className="px-4 py-3">Total</th>
+                    {Object.entries(manpowerData[0]).map(([label], index) => (
+                        <th key={index} className="px-4 py-3 capitalize">{label}</th>
+                    ))}
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-primary/20 text-primary">
@@ -75,17 +76,20 @@ export default function OurManPower() {
                       className="hover:bg-primary/10 transition duration-300"
                     >
                       <td className="px-4 py-3 font-medium">{index + 1}</td>
-                      <td className="px-4 py-3">{item.description}</td>
+                      {Object.entries(item).map(([label, value]) => (
+                        <td className="px-4 py-3">{value}</td>
+                      ))}
+                      {/* <td className="px-4 py-3">{item.description}</td>
                       <td className="px-4 py-3 font-semibold text-right">
                         {item.total}
-                      </td>
+                      </td> */}
                     </tr>
                   ))}
                   <tr className="bg-primary/10 font-bold">
                     <td className="px-4 py-3" colSpan="2">
                       Total
                     </td>
-                    <td className="px-4 py-3 text-right">{total}</td>
+                    <td className="px-4 py-3 ">{total}</td>
                   </tr>
                 </tbody>
               </table>

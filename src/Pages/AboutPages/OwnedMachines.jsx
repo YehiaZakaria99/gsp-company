@@ -11,7 +11,7 @@ import {
 
 import machinesData from "../../Data/machinesData.json";
 
-const { ownedMachines } = machinesData;
+const { ownedMachinesData } = machinesData;
 
 const COLORS = [
   "#292C62",
@@ -27,7 +27,7 @@ const COLORS = [
 ];
 
 export default function OwnedMachines() {
-  const topMachines = ownedMachines
+  const topMachines = ownedMachinesData
     .sort((a, b) => b.quantity - a.quantity)
     .slice(0, 6);
 
@@ -58,21 +58,23 @@ export default function OwnedMachines() {
                 <thead className="bg-primary text-white">
                   <tr>
                     <th className="px-4 py-3">#</th>
-                    <th className="px-4 py-3">Description</th>
-                    <th className="px-4 py-3">Quantity</th>
+                    {Object.entries(ownedMachinesData[0]).map(([label]) => (
+                      <>
+                        <th className="px-4 py-3 capitalize">{label}</th>
+                      </>
+                    ))}
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-primary/20 text-primary">
-                  {ownedMachines.reverse().map((item, index) => (
+                  {ownedMachinesData.reverse().map((item, index) => (
                     <tr
                       key={index}
                       className="hover:bg-primary/10 transition duration-300"
                     >
                       <td className="px-4 py-3 font-medium">{index + 1}</td>
-                      <td className="px-4 py-3">{item.description}</td>
-                      <td className="px-4 py-3 font-semibold text-right">
-                        {item.quantity}
-                      </td>
+                      {Object.entries(item).map(([label, value]) => (
+                        <td className="px-4 py-3">{value}</td>
+                      ))}
                     </tr>
                   ))}
                 </tbody>

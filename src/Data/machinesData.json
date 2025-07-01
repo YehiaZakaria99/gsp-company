@@ -1,5 +1,5 @@
 {
-  "ownedMachines": [
+  "ownedMachinesData": [
     { "description": "Concrete Mixers (Truck 8 m3)", "quantity": 1 },
     { "description": "Water Tankers", "quantity": 4 },
     { "description": "Asphalt Cutters", "quantity": 2 },
