@@ -8,25 +8,32 @@ import Picture2 from "/HomePage/WhyChooseUs/Picture2.png";
 import Picture3 from "/HomePage/WhyChooseUs/Picture3.png";
 import Picture4 from "/HomePage/WhyChooseUs/Picture4.png";
 import Picture5 from "/HomePage/WhyChooseUs/Picture5.png";
+import bgImg from "/HomePage/WhyChooseUs/3333.jpg";
 
 import { cn } from "../lib/utils";
+import { BadgeCheck, Briefcase, Handshake, Workflow } from "lucide-react";
 
 export default function WhyChooseUs() {
   const bookRef = useRef();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (bookRef.current) {
-        bookRef.current.pageFlip().flipNext();
-      }
-    }, 2000);
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       if (bookRef.current) {
+//         bookRef.current.pageFlip().flipNext();
+//       }
+//     }, 2000);
 
-    return () => clearTimeout(timer);
-  }, []);
+//     return () => clearTimeout(timer);
+//   }, []);
 
   return (
-    <section id="why-choose-us" className="bg-primary/95 py-20 px-4 md:px-16">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 ">
+    <section
+      id="why-choose-us"
+      className="relative bg-primary/95 py-20 px-4 md:px-16 bg-cover bg-bottom bg-fixed"
+      style={{ backgroundImage: `url(${bgImg})` }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-primary via-hover/80 to-primary/90 z-10" />
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 relative z-20">
         {/* Left: Flipbook */}
         <div data-aos="fade-up" className="space-y-6">
           <div className="flex justify-center">
@@ -35,7 +42,7 @@ export default function WhyChooseUs() {
               width={300}
               height={500}
               showCover={false}
-              className="shadow-2xl rounded-md"
+              className="shadow-2xl rounded-xl"
               useMouseEvents={true}
               flippingTime={1000} // smoother transition
             >
@@ -51,11 +58,18 @@ export default function WhyChooseUs() {
                   <h2 className="text-xl md:text-2xl font-bold text-white tracking-wide">
                     Our Certifications
                   </h2>
+                  <p className="text-sm ">
+                    These certificates prove our commitment to safety, quality,
+                    and environmental responsibility.
+                  </p>
+                  <p className="text-sm absolute bottom-10">
+                    Click page to explore more
+                  </p>
                 </div>
               </div>
 
               {/* Intro Page */}
-              <div
+              {/* <div
                 className={cn(
                   "flex items-center justify-center text-center",
                   "bg-hover text-white border-2 border-black/50 shadow-inner",
@@ -72,14 +86,21 @@ export default function WhyChooseUs() {
                       quality, and environmental responsibility.
                     </p>
                   </div>
-                  <p className="text-sm ">
-                    Click page or wait to explore more
-                  </p>
+                  <p className="text-sm ">Click page or wait to explore more</p>
                 </div>
-              </div>
+              </div> */}
 
               {/* ISO Certificates */}
-              {[ISO_45001, ISO_9001, ISO_14001, Picture1, Picture2, Picture3, Picture4,Picture5].map((img, i) => (
+              {[
+                ISO_45001,
+                ISO_9001,
+                ISO_14001,
+                Picture1,
+                Picture2,
+                Picture3,
+                Picture4,
+                Picture5,
+              ].map((img, i) => (
                 <div key={i} className="bg-white h-full rounded-xl">
                   <img
                     src={img}
@@ -124,45 +145,57 @@ export default function WhyChooseUs() {
         {/* Right: Why Choose Us */}
         <div data-aos="fade-up" className="space-y-6">
           <h3 className="text-3xl font-bold text-white mb-4">Why Choose Us?</h3>
-          <div className="space-y-5 text-gray-300 text-sm">
-            <div>
-              <h4 className="text-xl font-semibold text-white">
-                Certified Excellence
-              </h4>
-              <p>
-                We are internationally certified in quality, safety, and
-                environmental standards.
-              </p>
+          <div className="space-y-8 text-gray-300 text-sm">
+            <div className="flex gap-2">
+              <BadgeCheck></BadgeCheck>
+              <div>
+                <h4 className="text-xl font-semibold text-white">
+                  Certified Excellence
+                </h4>
+                <p>
+                  We are internationally certified in quality, safety, and
+                  environmental standards.
+                </p>
+              </div>
             </div>
 
-            <div>
-              <h4 className="text-xl font-semibold text-white">
-                Extensive Industry Experience
-              </h4>
-              <p>
-                Over 20 years of expertise in delivering industrial and
-                construction solutions.
-              </p>
+            <div className="flex gap-2">
+              <Briefcase></Briefcase>
+              <div>
+                <h4 className="text-xl font-semibold text-white">
+                  Extensive Industry Experience
+                </h4>
+                <p className="">
+                  Over 20 years of expertise in delivering industrial and
+                  construction solutions.
+                </p>
+              </div>
             </div>
 
-            <div>
-              <h4 className="text-xl font-semibold text-white">
-                End-to-End Solutions
-              </h4>
-              <p>
-                From design to final delivery, we manage every step with
-                precision and care.
-              </p>
+            <div className="flex gap-2">
+              <Workflow></Workflow>
+              <div>
+                <h4 className="text-xl font-semibold text-white">
+                  End-to-End Solutions
+                </h4>
+                <p>
+                  From design to final delivery, we manage every step with
+                  precision and care.
+                </p>
+              </div>
             </div>
 
-            <div>
-              <h4 className="text-xl font-semibold text-white">
-                Trusted by Industry Leaders
-              </h4>
-              <p>
-                We serve high-profile clients including ARAMCO and other
-                regional leaders.
-              </p>
+            <div className="flex gap-2">
+              <Handshake></Handshake>
+              <div>
+                <h4 className="text-xl font-semibold text-white">
+                  Trusted by Industry Leaders
+                </h4>
+                <p>
+                  We serve high-profile clients including ARAMCO and other
+                  regional leaders.
+                </p>
+              </div>
             </div>
           </div>
         </div>
