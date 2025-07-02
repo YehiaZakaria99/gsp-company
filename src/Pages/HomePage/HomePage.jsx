@@ -2,6 +2,7 @@
 import { cn } from "../../lib/utils";
 import AboutSection from "../../Sections/AboutSection";
 import LeadershipSection from "../../Sections/LeadershipSection";
+import OurSolutionsSection from "../../Sections/OurSolutionsSection";
 import HeroSection from "./../../Sections/HeroSection";
 import WhyChooseUs from "./../../Sections/WhyChooseUs";
 
@@ -13,10 +14,9 @@ export default function HomePage() {
         <HeroSection />
         <LeadershipSection />
         <AboutSection />
-
         <WhyChooseUs />
+        <OurSolutionsSection />
 
-        {/* OurSolutionsSection */}
         {/* Certificates */}
         {/* Contact Us */}
       </div>

@@ -16,15 +16,16 @@ import { BadgeCheck, Briefcase, Handshake, Workflow } from "lucide-react";
 export default function WhyChooseUs() {
   const bookRef = useRef();
 
-//   useEffect(() => {
-//     const timer = setTimeout(() => {
-//       if (bookRef.current) {
-//         bookRef.current.pageFlip().flipNext();
-//       }
-//     }, 2000);
-
-//     return () => clearTimeout(timer);
-//   }, []);
+  const imgs = [
+    ISO_45001,
+    ISO_9001,
+    ISO_14001,
+    Picture1,
+    Picture2,
+    Picture3,
+    Picture4,
+    Picture5,
+  ];
 
   return (
     <section
@@ -68,39 +69,8 @@ export default function WhyChooseUs() {
                 </div>
               </div>
 
-              {/* Intro Page */}
-              {/* <div
-                className={cn(
-                  "flex items-center justify-center text-center",
-                  "bg-hover text-white border-2 border-black/50 shadow-inner",
-                  "h-full p-4  rounded-xl"
-                )}
-              >
-                <div className="h-full flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white tracking-wide mb-2">
-                      Certified for Excellence
-                    </h3>
-                    <p className="text-sm ">
-                      These certificates prove our commitment to safety,
-                      quality, and environmental responsibility.
-                    </p>
-                  </div>
-                  <p className="text-sm ">Click page or wait to explore more</p>
-                </div>
-              </div> */}
-
               {/* ISO Certificates */}
-              {[
-                ISO_45001,
-                ISO_9001,
-                ISO_14001,
-                Picture1,
-                Picture2,
-                Picture3,
-                Picture4,
-                Picture5,
-              ].map((img, i) => (
+              {imgs.map((img, i) => (
                 <div key={i} className="bg-white h-full rounded-xl">
                   <img
                     src={img}
