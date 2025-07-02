@@ -2,30 +2,23 @@
 import { cn } from "../../lib/utils";
 import AboutSection from "../../Sections/AboutSection";
 import LeadershipSection from "../../Sections/LeadershipSection";
-import HeroSection from './../../Sections/HeroSection';
+import HeroSection from "./../../Sections/HeroSection";
+import WhyChooseUs from "./../../Sections/WhyChooseUs";
 
 export default function HomePage() {
   return (
     <>
-      <div
-        className={cn(
-          "",
-          "",
-          ""
-        )}
-      >
+      <div className={cn("", "", "")}>
         {/* HeroSection */}
         <HeroSection />
-        {/* LeadershipSection */}
         <LeadershipSection />
-        {/* AboutSection */}
         <AboutSection />
-        
+
+        <WhyChooseUs />
+
         {/* OurSolutionsSection */}
         {/* Certificates */}
         {/* Contact Us */}
-
-
       </div>
     </>
   );
