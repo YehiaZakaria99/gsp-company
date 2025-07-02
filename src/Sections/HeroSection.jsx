@@ -52,7 +52,7 @@ export default function HeroSection() {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-primary via-navbar/50 to-primary/90 z-10" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary via-navbar/40 to-hover z-10" />
 
               {/* Content */}
               <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
@@ -79,7 +79,7 @@ export default function HeroSection() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.6 }}
-                  className="text-primary/80 text-xl md:text-3xl font-semibold overflow-hidden"
+                  className="text-white text-xl md:text-3xl font-bold overflow-hidden"
                 >
                   Expertise in construction and pipeline solutions
                 </motion.h3>
