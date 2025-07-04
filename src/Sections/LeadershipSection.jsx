@@ -1,8 +1,8 @@
-import React from "react";
 import { cn } from "../lib/utils";
 import img1 from "/HomePage/LeadershipSection/img1.webp";
-import video from "/HomePage/LeadershipSection/video.mp4";
 import VideoPlayer from "./../Components/LeaderShipComponent/VideoPlayer";
+import { NavLink } from "react-router";
+import chairmanImg from "/AboutPages/LeadershipPage/owner.jpg";
 
 export default function LeadershipSection() {
   return (
@@ -60,28 +60,28 @@ export default function LeadershipSection() {
                   </ul>
 
                   {/* // { CTAButton } */}
-                  <a
-                    href="#/about/chairman-message"
+                  <NavLink
+                    to="about/leadership"
                     className={cn(
                       "inline-block font-semibold mt-4 px-6 py-2  rounded-lg",
                       "special-style"
                     )}
                   >
                     Read Chairman’s Message
-                  </a>
+                  </NavLink>
 
                   {/* // { Signature } */}
 
                   {/* Chairman */}
                   <div className="flex items-center gap-4 mt-6">
                     <img
-                      src="/assets/img/chairman.jpg"
+                      src={chairmanImg}
                       alt="Chairman"
-                      className="w-12 h-12 rounded-full"
+                      className="w-12 h-12 rounded-full object-cover"
                     />
                     <div>
                       <p className="font-semibold text-sm">
-                        Mohammed Al Qahtani
+                        Mohammed Shamrookh Al Assmi
                       </p>
                       <p className="text-xs text-gray-500">
                         Chairman of Company
@@ -92,9 +92,9 @@ export default function LeadershipSection() {
                   {/* Executive Director */}
                   <div className="flex items-center gap-4 mt-6">
                     <img
-                      src="/assets/img/chairman.jpg"
+                      src={chairmanImg}
                       alt="Executive Director"
-                      className="w-12 h-12 rounded-full"
+                      className="w-12 h-12 rounded-full object-cover"
                     />
                     <div>
                       <p className="font-semibold text-sm">Mutaeb AlHajri</p>

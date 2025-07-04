@@ -1,5 +1,5 @@
 import React from "react";
-import mainImg from "/AboutPage/our-man-power/team.webp";
+import mainImg from "/AboutPages/our-man-power/team.webp";
 import {
   PieChart,
   Pie,
@@ -44,7 +44,7 @@ export default function OurManPower() {
           className="relative px-6 md:px-16 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 bg-cover h-[300px] md:h-[450px] lg:h-[500px] bg-fixed bg-center shadow-xl overflow-hidden"
           style={{ backgroundImage: `url(${mainImg})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-black/60 to-primary/80 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-hover/50 to-primary/80 z-10" />
           <div className="md:w-1/2 space-y-4 z-20 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg">
               Our Man Power
@@ -73,7 +73,7 @@ export default function OurManPower() {
                   {manpowerData.reverse().map((item, index) => (
                     <tr
                       key={index}
-                      className="hover:bg-primary/10 transition duration-300"
+                      className="hover:bg-hover hover:text-white transition-all duration-300"
                     >
                       <td className="px-4 py-3 font-medium">{index + 1}</td>
                       {Object.entries(item).map(([label, value]) => (

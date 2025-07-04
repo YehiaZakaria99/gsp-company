@@ -1,4 +1,4 @@
-import mainImg from "/AboutPage/financial-status/financial-status.jpg";
+import mainImg from "/AboutPages/financial-status/financial-status.jpg";
 import {
   BarChart,
   Bar,
@@ -37,7 +37,7 @@ export default function FinancialStatus() {
           className="relative px-6 md:px-16 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 bg-cover h-[300px] md:h-[450px] lg:h-[500px] bg-fixed bg-center shadow-xl overflow-hidden"
           style={{ backgroundImage: `url(${mainImg})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-black/60 to-primary/80 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-hover/50 to-primary/80 z-10" />
           <div className="md:w-1/2 space-y-4 z-20 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg">
               Financial Status
@@ -66,7 +66,7 @@ export default function FinancialStatus() {
                   {financialData.map((item, index) => (
                     <tr
                       key={index}
-                      className="hover:bg-primary/10 transition duration-300"
+                      className="hover:bg-hover hover:text-white transition-all duration-300"
                     >
                       {Object.entries(item)
                         .reverse()

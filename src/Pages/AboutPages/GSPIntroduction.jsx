@@ -1,10 +1,10 @@
 import Slider from "react-slick";
 // images
-import mainImg from "/AboutPage/gsp-introduction/introduction.webp";
-import pipeImg from "/AboutPage/gsp-introduction/pipelines-solutions.webp";
-import teamImg from "/AboutPage/gsp-introduction/team.webp";
-import img3 from "/AboutPage/gsp-introduction/img3.webp";
-import img4 from "/AboutPage/gsp-introduction/img4.webp";
+import mainImg from "/AboutPages/gsp-introduction/introduction.webp";
+import pipeImg from "/AboutPages/gsp-introduction/pipelines-solutions.webp";
+import teamImg from "/AboutPages/gsp-introduction/team.webp";
+import img3 from "/AboutPages/gsp-introduction/img3.webp";
+import img4 from "/AboutPages/gsp-introduction/img4.webp";
 
 export default function GSPIntroduction() {
   const introData = [
@@ -48,13 +48,13 @@ export default function GSPIntroduction() {
   };
 
   return (
-    <section className="introduction bg-primary/20 py-24 pt-20">
+    <section className="introduction bg-white py-24 pt-20">
       {/* Title + Image */}
       <div
         className="relative px-6 md:px-16 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 bg-cover h-[300px] md:h-[450px] lg:h-[500px] bg-fixed bg-bottom  shadow-xl overflow-hidden"
         style={{ backgroundImage: `url(${mainImg})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-black/60 to-primary/80 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-hover/50 to-primary/80 z-10" />
         <div className="md:w-1/2 space-y-4 z-20 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg">
             Introduction
@@ -71,13 +71,13 @@ export default function GSPIntroduction() {
         <Slider {...settings} className="space-y-4">
           {introData.map(({ h2, p, img }, key) => (
             <div key={key}>
-              <div className="transition-all duration-1000 ease-in-out px-4 py-8 bg-white rounded-2xl shadow-xl flex flex-col md:flex-row items-center gap-6">
+              <div className="transition-all duration-1000 ease-in-out px-4 py-8 border-t-4 border-primary bg-hover rounded-2xl shadow-xl flex flex-col md:flex-row items-center gap-6">
                 <img
                   src={img}
                   alt="GSP Slide"
                   className="w-full md:w-[400px] h-[250px] rounded-xl shadow-lg object-cover"
                 />
-                <div className="text-primary text-lg leading-relaxed font-semibold">
+                <div className="text-white text-lg leading-relaxed font-semibold">
                   <p className="whitespace-pre-line md:w-[700px]">{p}</p>
                 </div>
               </div>

@@ -18,6 +18,7 @@ import OrganizationalChart from "./Pages/AboutPages/OrganizationalChart";
 import OurManPower from "./Pages/AboutPages/OurManPower";
 import OwnedMachines from "./Pages/AboutPages/OwnedMachines";
 import FinancialStatus from "./Pages/AboutPages/FinancialStatus";
+import LeadershipPage from "./Pages/AboutPages/LeadershipPage";
 
 function App() {
   const routers = createBrowserRouter([
@@ -30,6 +31,7 @@ function App() {
           path: "about",
           element: <AboutPage />,
           children: [
+            { path: "/about/leadership", element: <LeadershipPage /> },
             { path: "/about/gsp-introduction", element: <GSPIntroduction /> },
             { path: "/about/gsp-information", element: <GSPInformation /> },
             { path: "/about/organizational-chart", element: <OrganizationalChart /> },

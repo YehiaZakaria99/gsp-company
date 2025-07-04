@@ -1,4 +1,4 @@
-import img1 from "/AboutPage/gsp-information/scan-me.webp";
+import img1 from "/AboutPages/gsp-information/scan-me.webp";
 import { cn } from "./../../lib/utils";
 
 import informationData from "../../Data/informationData.json";
