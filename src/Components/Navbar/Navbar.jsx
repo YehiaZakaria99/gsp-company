@@ -61,7 +61,7 @@ export default function Navbar() {
           </NavLink>
 
           {/* Desktop */}
-          <div className="hidden lg:flex space-x-8">
+          <div className="hidden lg:flex space-x-8 text-lg">
             {navItems.map((item, index) => (
               <div key={index} className="relative">
                 {item.aboutList ? (
@@ -78,7 +78,7 @@ export default function Navbar() {
                 ) : (
                   <NavLink
                     to={item.to}
-                    className="text-primary text-lg font-bold hover:text-hover transition-colors duration-300 flex items-center"
+                    className="text-primary font-bold hover:text-hover transition-colors duration-300 flex items-center"
                   >
                     {item.name}
                   </NavLink>

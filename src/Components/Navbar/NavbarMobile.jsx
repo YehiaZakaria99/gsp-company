@@ -39,7 +39,7 @@ export default function NavbarMobile({ navItems, isMenuOpen, setIsMenuOpen }) {
           "transition-all duration-300"
         )}
       >
-        <div className=" text-center text-xl font-bold text-primary">
+        <div className=" text-center text-lg font-bold text-primary">
           {navItems.map((item, index) => (
             <div className="relative" key={index}>
               {item.aboutList ? (

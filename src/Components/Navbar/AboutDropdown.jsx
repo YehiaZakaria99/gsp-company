@@ -36,7 +36,7 @@ export default function AboutDropdown({
         <button
           onClick={() => setState((prev) => !prev)}
           className={cn(
-            "text-primary text-lg font-bold my-2 lg:my-0",
+            "text-primary font-bold my-2 lg:my-0",
             "inline-flex items-center",
             "hover:text-hover transition-colors duration-300"
           )}
@@ -72,7 +72,7 @@ export default function AboutDropdown({
                 }}
                 className={cn(
                   isMobile ? "text-sm" : "text-md ",
-                  "aboutLinksStyle"
+                  "aboutLinksStyle "
                 )}
               >
                 {subItem.name}
