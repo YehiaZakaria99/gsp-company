@@ -2,7 +2,7 @@ import { cn } from "../lib/utils";
 import img1 from "/HomePage/LeadershipSection/img1.webp";
 import VideoPlayer from "./../Components/LeaderShipComponent/VideoPlayer";
 import { NavLink } from "react-router";
-import chairmanImg from "/AboutPages/LeadershipPage/owner.jpg";
+import chairmanImg from "/AboutPages/LeadershipPage/owner.webp";
 
 export default function LeadershipSection() {
   return (
@@ -13,12 +13,12 @@ export default function LeadershipSection() {
           <div className="w-full lg:w-1/2 space-y-4">
             <div className="relative rounded-xl overflow-hidden shadow-lg">
               <img
+                loading="lazy"
                 src={img1}
-                alt=""
+                alt="team"
                 className="w-full object-center object-cover h-[250px]"
               />
             </div>
-
             <p className="text-4xl font-bold text-primary">
               22+
               <span className="text-gray-800 text-xl ml-1">
@@ -75,6 +75,7 @@ export default function LeadershipSection() {
                   {/* Chairman */}
                   <div className="flex items-center gap-4 mt-6">
                     <img
+                      loading="lazy"
                       src={chairmanImg}
                       alt="Chairman"
                       className="w-12 h-12 rounded-full object-cover"
@@ -92,6 +93,7 @@ export default function LeadershipSection() {
                   {/* Executive Director */}
                   <div className="flex items-center gap-4 mt-6">
                     <img
+                      loading="lazy"
                       src={chairmanImg}
                       alt="Executive Director"
                       className="w-12 h-12 rounded-full object-cover"

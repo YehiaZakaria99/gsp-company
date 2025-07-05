@@ -46,6 +46,7 @@ export default function HeroSection() {
           <div key={index}>
             <div className="relative h-screen w-full overflow-hidden">
               <img
+                loading="lazy"
                 src={src}
                 alt={`slide-${index}`}
                 className="absolute inset-0 h-full w-full object-cover object-center z-0 transition-opacity duration-1000"

@@ -1,14 +1,14 @@
 import { useEffect, useRef } from "react";
 import HTMLFlipBook from "react-pageflip";
-import ISO_45001 from "/HomePage/WhyChooseUs/ISO45001.jpg";
-import ISO_9001 from "/HomePage/WhyChooseUs/ISO9001.jpg";
-import ISO_14001 from "/HomePage/WhyChooseUs/ISO14001.jpg";
-import Picture1 from "/HomePage/WhyChooseUs/Picture1.png";
-import Picture2 from "/HomePage/WhyChooseUs/Picture2.png";
-import Picture3 from "/HomePage/WhyChooseUs/Picture3.png";
-import Picture4 from "/HomePage/WhyChooseUs/Picture4.png";
-import Picture5 from "/HomePage/WhyChooseUs/Picture5.png";
-import bgImg from "/HomePage/WhyChooseUs/3333.jpg";
+import bgImg from "/HomePage/WhyChooseUs/bgImg.webp";
+import ISO_45001 from "/HomePage/WhyChooseUs/ISO45001.webp";
+import ISO_9001 from "/HomePage/WhyChooseUs/ISO9001.webp";
+import ISO_14001 from "/HomePage/WhyChooseUs/ISO14001.webp";
+import Picture1 from "/HomePage/WhyChooseUs/Picture1.webp";
+import Picture2 from "/HomePage/WhyChooseUs/Picture2.webp";
+import Picture3 from "/HomePage/WhyChooseUs/Picture3.webp";
+import Picture4 from "/HomePage/WhyChooseUs/Picture4.webp";
+import Picture5 from "/HomePage/WhyChooseUs/Picture5.webp";
 
 import { cn } from "../lib/utils";
 import { BadgeCheck, Briefcase, Handshake, Workflow } from "lucide-react";

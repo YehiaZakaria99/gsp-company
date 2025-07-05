@@ -1,4 +1,4 @@
-import mainImg from "/AboutPages/financial-status/financial-status.jpg";
+import mainImg from "/AboutPages/financial-status/financial-status.webp";
 import {
   BarChart,
   Bar,

@@ -25,6 +25,7 @@ export default function VideoPlayer() {
       data-aos-delay="500"
     >
       <video
+        preload="none"
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
         src={video}

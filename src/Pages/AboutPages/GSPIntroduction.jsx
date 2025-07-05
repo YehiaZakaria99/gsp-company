@@ -73,6 +73,7 @@ export default function GSPIntroduction() {
             <div key={key}>
               <div className="transition-all duration-1000 ease-in-out px-4 py-8 border-t-4 border-primary bg-hover rounded-2xl shadow-xl flex flex-col md:flex-row items-center gap-6">
                 <img
+                  loading="lazy"
                   src={img}
                   alt="GSP Slide"
                   className="w-full md:w-[400px] h-[250px] rounded-xl shadow-lg object-cover"

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { Tree, TreeNode } from "react-organizational-chart";
+import { useEffect, useState } from "react";
+import { TreeNode } from "react-organizational-chart";
 import chartData from "../../Data/chartData.json";
 import { cn } from "../../lib/utils";
 
-import mainImg from "/AboutPages/organizational-chart/bgImg.jpg";
+import mainImg from "/AboutPages/organizational-chart/bgImg.webp";
 import HeadManagement from "../../Components/OrganizationalComponents/HeadManagement";
 import HsE from "./../../Components/OrganizationalComponents/HsE";
 import QualityControl from "../../Components/OrganizationalComponents/QualityControl";

@@ -1,6 +1,6 @@
 import { cn } from "../../lib/utils";
-import bgImg from "/AboutPages/LeadershipPage/img.jpg";
-import chairmanImg from "/AboutPages/LeadershipPage/owner.jpg";
+import bgImg from "/AboutPages/LeadershipPage/img.webp";
+import chairmanImg from "/AboutPages/LeadershipPage/owner.webp";
 
 export default function LeadershipPage() {
   return (
@@ -51,6 +51,7 @@ export default function LeadershipPage() {
             <div className="flex justify-center">
               <div className="relative rounded-2xl overflow-hidden group">
                 <img
+                  loading="lazy"
                   src={chairmanImg}
                   alt="Company Owner"
                   className={cn(

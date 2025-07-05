@@ -1,4 +1,6 @@
 import img1 from "/AboutPages/gsp-information/scan-me.webp";
+import bgImg from "/AboutPages/gsp-information/bgImg.webp";
+
 import { cn } from "./../../lib/utils";
 
 import informationData from "../../Data/informationData.json";
@@ -7,10 +9,20 @@ const { infoData } = informationData;
 
 export default function GSPInformation() {
   return (
-    <section className="gsp-information min-h-screen bg-primary/10 py-36 md:py-24 relative overflow-hidden">
+    <section className="bg-primary/20 py-24 pt-20">
       {/* Background Blur Circles */}
-      <div className="absolute w-96 h-96 bg-white/10 rounded-full -top-20 -left-20 blur-3xl opacity-20"></div>
-      <div className="absolute w-72 h-72 bg-white/5 rounded-full -bottom-10 -right-10 blur-2xl opacity-20"></div>
+      {/* Header */}
+      <div
+        className="relative px-6 md:px-16 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 bg-cover h-[300px] md:h-[450px] lg:h-[500px] bg-fixed bg-bottom shadow-xl overflow-hidden"
+        style={{ backgroundImage: `url(${bgImg})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-hover/50 to-primary/80 z-10" />
+        <div className="md:w-1/2 space-y-4 z-20 text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg">
+            Company Information
+          </h1>
+        </div>
+      </div>
 
       <div className="container px-4 md:px-10 lg:px-20">
         <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-12">
@@ -20,17 +32,14 @@ export default function GSPInformation() {
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary border-b-2 border-primary/50 inline-block pb-2">
-              Company Information
-            </h2>
             <ul className="space-y-4">
               {infoData.map((infoObj, key) => (
                 <li
                   key={key}
                   className={cn(
-                    "bg-primary p-4 rounded-lg shadow-lg backdrop-blur-sm border border-white/20",
-                    "transition-all duration-500 ",
-                    "group hover:bg-white"
+                    "bg-white text-primary border-primary border-t-4 p-4 rounded-lg shadow-lg backdrop-blur-sm",
+                    "transition-all duration-300 ",
+                    "hover:bg-hover hover:text-white hover:border-hover"
                   )}
                   data-aos="fade-up"
                   data-aos-delay={400 + key * 100}
@@ -38,21 +47,11 @@ export default function GSPInformation() {
                   {Object.entries(infoObj).map(([label, value], i) => (
                     <div key={i} className="flex flex-col gap-1">
                       <span
-                        className={cn(
-                          " text-sm md:text-base font-semibold text-white/80 ",
-                          "transition-all duration-300",
-                          "group-hover:text-primary"
-                        )}
+                        className={cn(" text-sm md:text-base font-semibold ")}
                       >
                         {label}
                       </span>
-                      <span
-                        className={cn(
-                          "text-base md:text-lg font-bold text-white",
-                          "transition-all duration-300",
-                          "group-hover:text-primary/80"
-                        )}
-                      >
+                      <span className={cn("text-base md:text-lg font-bold ")}>
                         {value}
                       </span>
                     </div>
@@ -68,11 +67,21 @@ export default function GSPInformation() {
             data-aos="zoom-in"
             data-aos-delay="500"
           >
-            <div className="overflow-hidden rounded-2xl shadow-2xl border border-white/20">
+            <div className="relative group overflow-hidden rounded-2xl shadow-2xl ">
               <img
+                loading="lazy"
                 src={img1}
                 alt="Scan QR"
-                className="w-full h-auto object-cover grayscale hover:grayscale-0 transition duration-500"
+                className={cn(
+                  "w-full h-auto object-cover",
+                  "transition duration-300 group-hover:scale-125"
+                )}
+              />
+              <div
+                className={cn(
+                  "absolute inset-0 z-10 bg-hover/30",
+                  "transition duration-300 group-hover:bg-transparent"
+                )}
               />
             </div>
           </div>
