@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import video from "/HomePage/LeadershipSection/video.mp4";
 import { Play } from "lucide-react";
+import poster from "/HomePage/LeadershipSection/poster.webp";
 
 export default function VideoPlayer() {
   const videoRef = useRef(null);
@@ -26,6 +27,7 @@ export default function VideoPlayer() {
     >
       <video
         preload="none"
+        poster={poster}
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
         src={video}
