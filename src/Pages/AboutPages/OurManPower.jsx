@@ -73,7 +73,7 @@ export default function OurManPower() {
                   {manpowerData.reverse().map((item, index) => (
                     <tr
                       key={index}
-                      className="hover:bg-hover hover:text-white transition-all duration-300"
+                      className="hover:bg-primary hover:text-white transition-all duration-300"
                     >
                       <td className="px-4 py-3 font-medium">{index + 1}</td>
                       {Object.entries(item).map(([label, value]) => (

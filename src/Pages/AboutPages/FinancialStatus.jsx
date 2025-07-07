@@ -66,7 +66,7 @@ export default function FinancialStatus() {
                   {financialData.map((item, index) => (
                     <tr
                       key={index}
-                      className="hover:bg-hover hover:text-white transition-all duration-300"
+                      className="hover:bg-primary hover:text-white transition-all duration-300"
                     >
                       {Object.entries(item)
                         .reverse()

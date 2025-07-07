@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
       className="relative bg-primary/95 py-20 px-4 md:px-16 bg-cover bg-bottom bg-fixed"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-hover/30 to-primary/80 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-primary/80 z-10" />
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 relative z-20">
         {/* Left: Flipbook */}
         <div data-aos="fade-up" className="space-y-6">
@@ -103,8 +103,8 @@ export default function WhyChooseUs() {
             <button
               className={cn(
                 "mt-6 inline-block text-md  px-4 py-2 rounded-md ",
-                "text-white font-bold bg-transparent border border-white",
-                "hover:bg-hover  transition duration-300"
+                "text-white font-bold bg-primary border border-white",
+                "hover:bg-primary hover:border-primary  transition duration-300",
               )}
             >
               More Details
@@ -114,12 +114,12 @@ export default function WhyChooseUs() {
 
         {/* Right: Why Choose Us */}
         <div data-aos="fade-up" className="space-y-6">
-          <h3 className="text-3xl font-bold text-white mb-4">Why Choose Us?</h3>
-          <div className="space-y-8 text-gray-300 text-sm">
-            <div className="flex gap-2">
+          <h3 className="text-3xl font-bold text-white mb-4">Why Choose Us ?</h3>
+          <div className="space-y-8 text-white text-sm ">
+            <div className="flex gap-2 ">
               <BadgeCheck></BadgeCheck>
               <div>
-                <h4 className="text-xl font-semibold text-white">
+                <h4 className="text-xl font-semibold ">
                   Certified Excellence
                 </h4>
                 <p>
@@ -132,7 +132,7 @@ export default function WhyChooseUs() {
             <div className="flex gap-2">
               <Briefcase></Briefcase>
               <div>
-                <h4 className="text-xl font-semibold text-white">
+                <h4 className="text-xl font-semibold ">
                   Extensive Industry Experience
                 </h4>
                 <p className="">
@@ -145,7 +145,7 @@ export default function WhyChooseUs() {
             <div className="flex gap-2">
               <Workflow></Workflow>
               <div>
-                <h4 className="text-xl font-semibold text-white">
+                <h4 className="text-xl font-semibold ">
                   End-to-End Solutions
                 </h4>
                 <p>
@@ -158,7 +158,7 @@ export default function WhyChooseUs() {
             <div className="flex gap-2">
               <Handshake></Handshake>
               <div>
-                <h4 className="text-xl font-semibold text-white">
+                <h4 className="text-xl font-semibold ">
                   Trusted by Industry Leaders
                 </h4>
                 <p>

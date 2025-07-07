@@ -62,7 +62,7 @@ export default function AboutSection() {
                 className={cn(
                   " p-6 rounded-xl  transition flex flex-col items-center gap-3 border ",
                   "shadow-md shadow-primary/70",
-                  "special-style"
+                  "special-style border-t-4"
                 )}
               >
                 <div className=" text-4xl">{section.icon}</div>

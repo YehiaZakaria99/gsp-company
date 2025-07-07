@@ -47,7 +47,7 @@ export default function OurSolutionsSection() {
               key={idx}
               className={cn(
                 "bg-white rounded-2xl shadow-md p-6 border-t-4 border-primary text-primary",
-                "hover:shadow-lg hover:bg-hover hover:text-white hover:border-hover transition-all duration-300"
+                "special-style border-t-4 "
               )}
             >
               <div className="mb-4 flex justify-center">{solution.icon}</div>
@@ -63,7 +63,7 @@ export default function OurSolutionsSection() {
             className={cn(
               "mt-6 inline-block text-md  px-4 py-2 rounded-md ",
               "font-semibold ",
-              "special-style"
+              "special-style border"
             )}
           >
             More Details

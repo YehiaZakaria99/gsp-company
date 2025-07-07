@@ -64,7 +64,7 @@ export default function LeadershipSection() {
                     to="about/leadership"
                     className={cn(
                       "inline-block font-semibold mt-4 px-6 py-2  rounded-lg",
-                      "special-style"
+                      "special-style border"
                     )}
                   >
                     Read Chairman’s Message
