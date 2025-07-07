@@ -9,17 +9,17 @@ const { infoData } = informationData;
 
 export default function GSPInformation() {
   return (
-    <section className="bg-primary/20 py-24 pt-20">
+    <section className="bg-primary/20 py-20">
       {/* Background Blur Circles */}
       {/* Header */}
       <div
-        className="relative px-6 md:px-16 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 bg-cover h-[300px] md:h-[450px] lg:h-[500px] bg-fixed bg-bottom shadow-xl overflow-hidden"
+        className="relative px-6 md:px-16 py-10 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 bg-cover h-[300px] md:h-[450px] lg:h-[500px] md:bg-fixed bg-bottom shadow-xl overflow-hidden"
         style={{ backgroundImage: `url(${bgImg})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-hover/30 to-primary/80 z-10" />
         <div className="md:w-1/2 space-y-4 z-20 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-bg tracking-tight leading-tight drop-shadow-lg">
-            Company Information
+            Information
           </h1>
         </div>
       </div>
@@ -39,7 +39,7 @@ export default function GSPInformation() {
                   className={cn(
                     "bg-white text-primary border-primary border-t-4 p-4 rounded-lg shadow-lg backdrop-blur-sm",
                     "transition-all duration-300 ",
-                    "hover:bg-hover hover:text-white hover:border-hover"
+                    "hover:bg-primary hover:text-white "
                   )}
                   data-aos="fade-up"
                   data-aos-delay={400 + key * 100}
@@ -79,7 +79,7 @@ export default function GSPInformation() {
               />
               <div
                 className={cn(
-                  "absolute inset-0 z-10 bg-hover/30",
+                  "absolute inset-0 z-10 bg-hover/20",
                   "transition duration-300 group-hover:bg-transparent"
                 )}
               />

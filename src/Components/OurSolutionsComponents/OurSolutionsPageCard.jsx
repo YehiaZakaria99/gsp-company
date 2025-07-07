@@ -10,7 +10,7 @@ export default function OurSolutionsPageCard({
       <div
         // id={id}
         className={cn(
-          "w-full flex flex-col-reverse items-center justify-center gap-0 md:gap-10 px-4 max-w-7xl mx-auto ",
+          "w-full flex flex-col items-center justify-center gap-0 md:gap-10 px-4 max-w-7xl mx-auto",
           index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
         )}
       >

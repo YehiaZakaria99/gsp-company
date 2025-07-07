@@ -5,15 +5,15 @@ import chairmanImg from "/AboutPages/LeadershipPage/owner.webp";
 export default function LeadershipPage() {
   return (
     <>
-      <section className="leadership-page">
+      <section className="leadership-page py-20 bg-primary/20 ">
         {/* Header Section */}
-        <section className="bg-primary/20 pt-20">
+        <section className=" ">
           <div
             className={cn(
-              "relative px-6 md:px-16 mb-20 shadow-2xl overflow-hidden",
+              "relative px-6 md:px-16 mb-20 shadow-2xl overflow-hidden py-10",
               "flex flex-col-reverse md:flex-row items-center gap-10",
               "h-[300px] md:h-[450px] lg:h-[500px]",
-              "bg-cover bg-center bg-fixed"
+              "bg-cover bg-center md:bg-fixed"
             )}
             style={{ backgroundImage: `url(${bgImg})` }}
           >
@@ -45,7 +45,7 @@ export default function LeadershipPage() {
         </section>
 
         {/* Message Section */}
-        <section className="px-6 md:px-16 py-16 bg-gradient-to-b from-white to-primary/5">
+        <section className="px-6 md:px-16 py-16 ">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center shadow-lg rounded-2xl p-6 md:p-10 bg-white/80 backdrop-blur-sm">
             {/* Image */}
             <div className="flex justify-center">

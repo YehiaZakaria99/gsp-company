@@ -15,7 +15,7 @@ export default {
         hero: "#F0F1F5",
       },
       screens: {
-        xs: "400px",
+        xs: "360px",
       },
     },
   },

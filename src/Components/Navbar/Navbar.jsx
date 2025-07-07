@@ -51,13 +51,13 @@ export default function Navbar() {
           "fixed top-0 left-0 w-full z-50 transition-all duration-300",
           isScrolled
             ? "bg-navbar backdrop-blur-md shadow-md py-3"
-            : "bg-navbar  py-5 shadow-xl"
+            : "bg-navbar py-5 shadow-xl"
         )}
       >
         <div className="container flex items-center justify-between flex-wrap">
           {/* Logo */}
-          <NavLink to="" className="flex items-center space-x-2 z-50 ">
-            <img src={logo} alt="Logo" className="h-10 w-auto" />
+          <NavLink to="" className="flex items-center z-50 ">
+            <img src={logo} alt="Logo" className="md:h-10 h-6 w-auto" />
           </NavLink>
 
           {/* Desktop */}

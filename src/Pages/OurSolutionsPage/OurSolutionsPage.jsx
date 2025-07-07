@@ -70,16 +70,15 @@ PLC panels & instrumentation
   ];
   return (
     <>
-      <section className="oursolution-page">
-        {/* <div className="container mx-auto px-4"> */}
+      <section className="oursolutions-page py-20">
         {/* Header Section */}
-        <section className="bg-primary/20 pt-20">
+        <section className="bg-primary/20">
           <div
             className={cn(
-              "relative px-6 md:px-16 mb-20 shadow-2xl overflow-hidden",
+              "relative px-6 md:px-16 py-10 mb-20 shadow-2xl overflow-hidden",
               "flex flex-col-reverse md:flex-row items-center gap-10",
               "h-[300px] md:h-[450px] lg:h-[500px]",
-              "bg-cover bg-bottom bg-fixed"
+              "bg-cover bg-bottom md:bg-fixed"
             )}
             style={{ backgroundImage: `url(${bgImg})` }}
           >
@@ -97,12 +96,8 @@ PLC panels & instrumentation
               </p>
             </div>
           </div>
-          {/* <h2
-            className="text-3xl md:text-4xl font-bold  mb-4  "
-            data-aos="fade-right"
-          ></h2> */}
         </section>
-        <section className="space-y-28 overflow-hidden">
+        <section className="space-y-28 overflow-hidden py-5">
           {solutions.map((solution, index) => (
             <OurSolutionsPageCard
               key={index}
@@ -111,11 +106,7 @@ PLC panels & instrumentation
             />
           ))}
 
-          {/* <OurSolutionsPageCard index={0} />
-            <OurSolutionsPageCard index={1} />
-            <OurSolutionsPageCard index={2} /> */}
         </section>
-        {/* </div> */}
       </section>
     </>
   );

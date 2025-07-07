@@ -49,10 +49,10 @@ export default function OrganizationalChart() {
   );
 
   return (
-    <section className="bg-primary/20 py-24 pt-20">
+    <section className="bg-primary/20 py-20">
       {/* Header */}
       <div
-        className="relative px-6 md:px-16 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 bg-cover h-[300px] md:h-[450px] lg:h-[500px] bg-fixed bg-center shadow-xl overflow-hidden"
+        className="relative px-6 md:px-16 py-10 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 bg-cover h-[300px] md:h-[450px] lg:h-[500px] md:bg-fixed bg-center shadow-xl overflow-hidden"
         style={{ backgroundImage: `url(${mainImg})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-hover/30 to-primary/80 z-10" />
