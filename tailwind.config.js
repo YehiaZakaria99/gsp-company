@@ -9,8 +9,8 @@ export default {
       },
       colors: {
         primary: "#292C62",
-        hover: "#075863",
-        active: "#075863",
+        hover: "#55E9FC",
+        active: "#55E9FC",
         navbar: "#F8F9FA",
         hero: "#F0F1F5",
       },

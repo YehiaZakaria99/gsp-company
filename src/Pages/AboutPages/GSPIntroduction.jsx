@@ -54,12 +54,12 @@ export default function GSPIntroduction() {
         className="relative px-6 md:px-16 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 bg-cover h-[300px] md:h-[450px] lg:h-[500px] bg-fixed bg-bottom  shadow-xl overflow-hidden"
         style={{ backgroundImage: `url(${mainImg})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-hover/50 to-primary/80 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-hover/30 to-primary/80 z-10" />
         <div className="md:w-1/2 space-y-4 z-20 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-bg tracking-tight leading-tight drop-shadow-lg">
             Introduction
           </h1>
-          <p className="text-white/90 text-lg md:text-xl max-w-md font-semibold">
+          <p className="text-white text-lg md:text-2xl max-w-md font-bold">
             Know more about our background, capabilities, and commitment to
             excellence.
           </p>
@@ -68,17 +68,17 @@ export default function GSPIntroduction() {
 
       {/* Slider Section */}
       <div className="px-6 md:px-16">
-        <Slider {...settings} className="space-y-4">
+        <Slider {...settings} className="space-y-4 rounded-2xl border-t-4 border-primary bg-white shadow-sm shadow-primary ">
           {introData.map(({ h2, p, img }, key) => (
-            <div key={key}>
-              <div className="transition-all duration-1000 ease-in-out px-4 py-8 border-t-4 border-primary bg-hover rounded-2xl shadow-xl flex flex-col md:flex-row items-center gap-6">
+            <div key={key} className="">
+              <div className="transition-all duration-1000 ease-in-out px-4 py-8   flex flex-col md:flex-row items-center gap-6">
                 <img
                   loading="lazy"
                   src={img}
                   alt="GSP Slide"
                   className="w-full md:w-[400px] h-[250px] rounded-xl shadow-lg object-cover"
                 />
-                <div className="text-white text-lg leading-relaxed font-semibold">
+                <div className="text-primary text-lg leading-relaxed font-semibold">
                   <p className="whitespace-pre-line md:w-[700px]">{p}</p>
                 </div>
               </div>

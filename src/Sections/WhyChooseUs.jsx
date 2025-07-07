@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
       className="relative bg-primary/95 py-20 px-4 md:px-16 bg-cover bg-bottom bg-fixed"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-primary via-hover/80 to-primary/90 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-hover/30 to-primary/80 z-10" />
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 relative z-20">
         {/* Left: Flipbook */}
         <div data-aos="fade-up" className="space-y-6">
@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
                 className={cn(
                   "h-full rounded-xl",
                   "flex items-center justify-center",
-                  "bg-hover text-white border-2 border-black/50 shadow-inner"
+                  "bg-primary text-white border-2 border-black/50 shadow-inner"
                 )}
               >
                 <div className="text-center space-y-2 px-4 h-full flex flex-col items-center justify-center ">
@@ -81,7 +81,7 @@ export default function WhyChooseUs() {
               ))}
 
               {/* Back Page */}
-              <div className="flex items-center justify-center bg-hover text-white h-full rounded-xl border-2 border-black/50">
+              <div className="flex items-center justify-center bg-primary text-white h-full rounded-xl border-2 border-black/50">
                 <div
                   className={cn(
                     "text-center space-y-2 h-full ",

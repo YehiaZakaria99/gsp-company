@@ -53,7 +53,7 @@ export default function HeroSection() {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-primary via-navbar/40 to-hover z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-hover/30 to-primary/80 z-10" />
 
               {/* Content */}
               <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
@@ -61,7 +61,7 @@ export default function HeroSection() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="text-primary text-3xl md:text-5xl my-8 font-extrabold tracking-wide overflow-hidden min-h-[3rem] md:min-h-[4rem]"
+                  className="text-bg text-3xl md:text-5xl my-8 font-extrabold tracking-wide overflow-hidden min-h-[3rem] md:min-h-[4rem]"
                 >
                   <TypeAnimation
                     sequence={[

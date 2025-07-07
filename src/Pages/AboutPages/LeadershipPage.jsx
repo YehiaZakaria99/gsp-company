@@ -17,9 +17,9 @@ export default function LeadershipPage() {
             )}
             style={{ backgroundImage: `url(${bgImg})` }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-hover/40 to-primary/90 z-10 animate-fade-in" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-hover/30 to-primary/80 z-10 animate-fade-in" />
             <div className="md:w-1/2 space-y-4 z-20 text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-xl">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-bg tracking-tight leading-tight drop-shadow-xl">
                 Leadership
               </h1>
             </div>
