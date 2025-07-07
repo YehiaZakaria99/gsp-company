@@ -2,11 +2,11 @@ import OurSolutionsPageCard from "./../../Components/OurSolutionsComponents/OurS
 
 import bgImg from "/OurSolutionsPage/bgImg.webp";
 
-
-import pipelinesImg from "/OurSolutionsPage/pipelines-solutions.webp";
 import constructionImg from "/OurSolutionsPage/construction-solutions.webp";
+import pipelinesImg from "/OurSolutionsPage/pipelines-solutions.webp";
 import mechanicalImg from "/OurSolutionsPage/mechanical-solutions.webp";
-
+import electricalImg from "/OurSolutionsPage/electrical-solutions.webp";
+import technicalImg from "/OurSolutionsPage/technical-solutions.webp";
 
 import { cn } from "../../lib/utils";
 
@@ -34,8 +34,39 @@ export default function OurSolutionsPage() {
       description: `We provide a full range of mechanical services; including equipment installation,
       maintenance, and repair, with a specific focus on air conditioning and refrigeration systems.`,
     },
-    { id: 3, img: "", title: "Electrical Solutions", description: `` },
-    { id: 3, img: "", title: "Technical Solutions", description: "" },
+    {
+      id: 3,
+      img: electricalImg,
+      title: "Electrical Solutions",
+      description: `
+Generators and Automatic changeover Panels,
+Cable Laying and Termination,
+Switchgears, Control centers and Specialized Panels,
+Power Distribution Systems,
+Lighting and lighting control Systems,
+Lighting Protection and Earthing,
+Uninterruptible Power Supply Systems,
+PLC panels & instrumentation
+
+`,
+    },
+    { id: 4, img: technicalImg , title: "Technical Solutions", description: `
+      Automation Systems,
+      Fire Alarm Systems,
+      Data Networking & Structured Cabling (Telephone & Data),
+      Fiber Optic Cabling & Transmission,
+      Wireless solutions,
+      Telecommunications,
+      Audio Visual Systems,
+      CCTV,MATV & SMATV Systems,
+      Access Control System & Gate Barrier Systems,
+      Public Address System & Intercom Systems,
+      Emergency Lighting Systems,
+      Central Battery System / UPS,
+      Intrusion Alarm System,
+      Nurse Call System.
+
+` },
   ];
   return (
     <>

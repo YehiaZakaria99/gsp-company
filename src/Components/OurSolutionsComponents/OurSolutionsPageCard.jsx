@@ -17,7 +17,7 @@ export default function OurSolutionsPageCard({
         {/* Image */}
         <div className="w-full md:w-1/2  ">
           <div className="my-8">
-            <div className="cursor-pointer flex h-[200px] sm:h-[300px] md:h-[350px] shadow-lg rounded-3xl overflow-hidden shadow-hover bg-primary/20">
+            <div className="cursor-pointer flex h-[200px] sm:h-[300px] md:h-[350px] shadow-lg rounded-3xl overflow-hidden shadow-primary bg-primary/20">
               <img
                 //   data-aos={index % 2 !== 0 ? "flip-right" : "flip-left"}
                 src={img}
