@@ -110,8 +110,31 @@
 .text-bg {
   background: linear-gradient(
     270deg,
-    var(--primary) 35%,
-    #fff 100%
+    var(--primary) 20%,
+    /* var(--hover) 60%, */
+    #fff 70%
+  );
+  -webkit-background-clip: text;
+  -o-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -o-te-webkit-text-fill-color: transparent;
+  -moz-te-webkit-text-fill-color: transparent;
+  line-height: 150%;
+  position: relative;
+  z-index: 2;
+  /* font-weight: 700; */
+  display: inline-block;
+}
+
+
+.text-bg-hero {
+  background: linear-gradient(
+    270deg,
+    #fff 20%,
+    var(--hover) 60%,
+    var(--primary) 70%
   );
   -webkit-background-clip: text;
   -o-background-clip: text;

@@ -4,11 +4,12 @@ import VideoPlayer from "./../Components/LeaderShipComponent/VideoPlayer";
 import { NavLink } from "react-router";
 import chairmanImg from "/AboutPages/LeadershipPage/owner.webp";
 import { Fade, Slide } from "react-awesome-reveal";
+import ScrollDown from "../Components/Scroll/ScrollDown";
 
 export default function LeadershipSection() {
   return (
     <>
-      <section id="leadershipSection" className="py-16 bg-white">
+      <section id="leadershipSection" className="py-20 bg-white relative">
         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-10 ">
           {/* // { Left - ImagesorVideo } */}
 
@@ -129,7 +130,9 @@ export default function LeadershipSection() {
               </div>
             </div>
           </div>
+        {/* Scroll Button */}
         </div>
+        {/* <ScrollDown to="leadershipSection" /> */}
       </section>
     </>
   );

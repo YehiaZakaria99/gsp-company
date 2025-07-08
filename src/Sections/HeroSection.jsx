@@ -10,6 +10,7 @@ import { Link } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
 import Slider from "react-slick";
 import { Fade, Slide } from "react-awesome-reveal";
+import ScrollDown from "./../Components/Scroll/ScrollDown";
 
 const slides = [img1, img2, img3, img4];
 
@@ -57,8 +58,8 @@ export default function HeroSection() {
 
               {/* Content */}
               <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 ">
-                <Fade direction="up" duration={800} cascade damping={1} >
-                  <h1 className="text-bg text-3xl md:text-5xl my-8 font-extrabold tracking-wide overflow-hidden min-h-[3rem] md:min-h-[4rem]">
+                <Fade direction="up" duration={800} cascade damping={1}>
+                  <h1 className="text-bg-hero text-3xl md:text-5xl my-8 font-extrabold tracking-wide overflow-hidden min-h-[3rem] md:min-h-[4rem]">
                     <TypeAnimation
                       sequence={[
                         1000,
@@ -80,22 +81,11 @@ export default function HeroSection() {
               </div>
 
               {/* Scroll Button */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 bottom-8 z-40">
-                <Link
-                  to="leadershipSection"
-                  smooth={true}
-                  duration={0}
-                  offset={-50}
-                >
-                  <div className="w-6 h-10 border-2 border-navbar cursor-pointer rounded-full flex items-start justify-center p-1 mx-auto animate-bounce">
-                    <div className="w-1 h-2 bg-navbar rounded-full" />
-                  </div>
-                </Link>
-              </div>
             </div>
           </div>
         ))}
       </Slider>
+        <ScrollDown to="leadershipSection" />
     </section>
   );
 }
