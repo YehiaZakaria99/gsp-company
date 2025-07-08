@@ -8,8 +8,7 @@ import {
 } from "lucide-react";
 import { NavLink } from "react-router";
 import { cn } from "../lib/utils";
-
-
+import { Fade, Zoom } from "react-awesome-reveal";
 
 export default function AboutSection() {
   const sections = [
@@ -45,45 +44,42 @@ export default function AboutSection() {
     <>
       <section className="py-20 bg-white ">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="font-bold text-3xl text-primary text-center">
-            About Us
-          </h3>
-          <p className="text-center max-w-96 mx-auto font-semibold my-6 md:text-lg text-primary/90">
-            Gulf Seas For Pipes. (GSP) since 1991 commits to provide
-            comprehensive top-quality services to its community.
-          </p>
+          <Fade
+            direction="right"
+            duration={600}
+            delay={200}
+            cascade
+            damping={0.5}
+          >
+            <h3 className="font-bold text-3xl text-primary text-center">
+              About Us
+            </h3>
+            <p className="text-center max-w-96 mx-auto font-semibold my-6 md:text-lg text-primary/90">
+              Gulf Seas For Pipes. (GSP) since 1991 commits to provide
+              comprehensive top-quality services to its community.
+            </p>
+          </Fade>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {sections.map((section, key) => (
-              <NavLink
-                key={key}
-                to={section.to}
-                className={cn(
-                  " p-6 rounded-xl  transition flex flex-col items-center gap-3 border ",
-                  "shadow-md shadow-primary/70",
-                  "special-style border-t-4"
-                )}
-              >
-                <div className=" text-4xl">{section.icon}</div>
-                <h3 className="text-lg font-bold ">{section.title}</h3>
-              </NavLink>
-            ))}
+            <Fade duration={800} cascade damping={0.2}>
+              {sections.map((section, key) => (
+                <NavLink
+                  key={key}
+                  to={section.to}
+                  className={cn(
+                    " p-6 rounded-xl  transition flex flex-col items-center gap-3 border ",
+                    "shadow-md shadow-primary/70",
+                    "special-style border-t-4"
+                  )}
+                >
+                  <div className=" text-4xl">{section.icon}</div>
+                  <h3 className="text-lg font-bold ">{section.title}</h3>
+                </NavLink>
+              ))}
+            </Fade>
           </div>
         </div>
       </section>
     </>
   );
 }
-
-/* 
-<div className="content-box py-20">
-            <h3 className="font-bold text-3xl text-primary text-center">
-              About Us
-            </h3>
-            <p className="text-center max-w-96 mx-auto font-semibold mt-6 md:text-lg text-navbar">
-              Gulf Seas For Pipes. (GSP) since 1991 commits to provide
-              comprehensive top-quality services to its community.
-            </p>
-          </div>
-
-*/

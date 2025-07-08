@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import img1 from "/HomePage/HeroSection/1.webp";
 import img2 from "/HomePage/HeroSection/2.webp";
 import img3 from "/HomePage/HeroSection/3.webp";
@@ -7,9 +7,9 @@ import img4 from "/HomePage/HeroSection/4.webp";
 import { cn } from "../lib/utils";
 import { Link } from "react-scroll";
 
-import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import Slider from "react-slick";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const slides = [img1, img2, img3, img4];
 
@@ -56,34 +56,27 @@ export default function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-hover/30 to-primary/80 z-10" />
 
               {/* Content */}
-              <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
-                <motion.h1
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  className="text-bg text-3xl md:text-5xl my-8 font-extrabold tracking-wide overflow-hidden min-h-[3rem] md:min-h-[4rem]"
-                >
-                  <TypeAnimation
-                    sequence={[
-                      1500,
-                      "Welcome to GSP",
-                      1500,
-                      "Gulf Seas For Pipes",
-                    ]}
-                    speed={75}
-                    cursor={false}
-                    repeat={Infinity}
-                  />
-                </motion.h1>
+              <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 ">
+                <Fade direction="up" duration={800} cascade damping={1} >
+                  <h1 className="text-bg text-3xl md:text-5xl my-8 font-extrabold tracking-wide overflow-hidden min-h-[3rem] md:min-h-[4rem]">
+                    <TypeAnimation
+                      sequence={[
+                        1000,
+                        "Welcome to GSP",
+                        1000,
+                        "Gulf Seas For Pipes",
+                      ]}
+                      speed={75}
+                      cursor={false}
+                      repeat={Infinity}
+                      preRenderFirstString
+                    />
+                  </h1>
 
-                <motion.h3
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 0.6 }}
-                  className="text-white text-xl md:text-3xl font-bold overflow-hidden"
-                >
-                  Expertise in construction and pipeline solutions
-                </motion.h3>
+                  <h3 className="text-white text-xl md:text-3xl font-bold overflow-hidden">
+                    Expertise in construction and pipeline solutions
+                  </h3>
+                </Fade>
               </div>
 
               {/* Scroll Button */}
@@ -103,7 +96,6 @@ export default function HeroSection() {
           </div>
         ))}
       </Slider>
-      
     </section>
   );
 }
