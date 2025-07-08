@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import HTMLFlipBook from "react-pageflip";
 import bgImg from "/HomePage/WhyChooseUs/bgImg.webp";
 import ISO_45001 from "/HomePage/WhyChooseUs/ISO45001.webp";
@@ -12,6 +12,7 @@ import Picture5 from "/HomePage/WhyChooseUs/Picture5.webp";
 
 import { cn } from "../lib/utils";
 import { BadgeCheck, Briefcase, Handshake, Workflow } from "lucide-react";
+import CountUp from "react-countup";
 
 export default function WhyChooseUs() {
   const bookRef = useRef();
@@ -104,7 +105,7 @@ export default function WhyChooseUs() {
               className={cn(
                 "mt-6 inline-block text-md  px-4 py-2 rounded-md ",
                 "text-white font-bold bg-primary border border-white",
-                "hover:bg-primary hover:border-primary  transition duration-300",
+                "hover:bg-primary hover:border-primary  transition duration-300"
               )}
             >
               More Details
@@ -114,14 +115,14 @@ export default function WhyChooseUs() {
 
         {/* Right: Why Choose Us */}
         <div data-aos="fade-up" className="space-y-6">
-          <h3 className="text-3xl font-bold text-white mb-4">Why Choose Us ?</h3>
+          <h3 className="text-3xl font-bold text-white mb-4">
+            Why Choose Us ?
+          </h3>
           <div className="space-y-8 text-white text-sm ">
             <div className="flex gap-2 ">
               <BadgeCheck></BadgeCheck>
               <div>
-                <h4 className="text-xl font-semibold ">
-                  Certified Excellence
-                </h4>
+                <h4 className="text-xl font-semibold ">Certified Excellence</h4>
                 <p>
                   We are internationally certified in quality, safety, and
                   environmental standards.
@@ -145,9 +146,7 @@ export default function WhyChooseUs() {
             <div className="flex gap-2">
               <Workflow></Workflow>
               <div>
-                <h4 className="text-xl font-semibold ">
-                  End-to-End Solutions
-                </h4>
+                <h4 className="text-xl font-semibold ">End-to-End Solutions</h4>
                 <p>
                   From design to final delivery, we manage every step with
                   precision and care.
@@ -167,6 +166,25 @@ export default function WhyChooseUs() {
                 </p>
               </div>
             </div>
+          </div>
+          <div className="text-white py-10  flex justify-between font-bold text-6xl">
+            <span className=" p-5 flex justify-center items-center">
+              <CountUp start={0} end={32} duration={1} enableScrollSpy={true} />
+              <span className="text-hover">K</span>
+            </span>
+            <span className=" p-5 flex justify-center items-center">
+              <CountUp
+                start={0}
+                end={250}
+                duration={1}
+                enableScrollSpy={true}
+              />
+              <span className="text-hover">+</span>
+            </span>
+            <span className=" p-5 flex justify-center items-center">
+              <CountUp start={0} end={45} duration={1} enableScrollSpy={true} />
+              <span className="text-hover">m</span>
+            </span>
           </div>
         </div>
       </div>

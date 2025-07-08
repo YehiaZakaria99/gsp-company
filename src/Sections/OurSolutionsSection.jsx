@@ -39,7 +39,7 @@ export default function OurSolutionsSection() {
   return (
     <section className="py-16 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <h2 className="text-4xl font-bold text-primary mb-12">Our Solutions</h2>
+        <h3 className="text-3xl font-bold text-primary mb-12">Our Solutions</h3>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           {solutions.map((solution, idx) => (
