@@ -9,7 +9,7 @@ import ScrollDown from "../Components/Scroll/ScrollDown";
 export default function LeadershipSection() {
   return (
     <>
-      <section id="leadershipSection" className="py-20 bg-white relative">
+      <section id="leadershipSection" className="py-20 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-10 ">
           {/* // { Left - ImagesorVideo } */}
 

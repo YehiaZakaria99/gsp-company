@@ -17,6 +17,7 @@ import { Fade } from "react-awesome-reveal";
 
 export default function WhyChooseUs() {
   const bookRef = useRef();
+  const [isMobile, setIsMobile] = useState(false);
 
   const imgs = [
     ISO_45001,
@@ -29,26 +30,39 @@ export default function WhyChooseUs() {
     Picture5,
   ];
 
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section
       id="why-choose-us"
-      className="relative bg-primary/95 py-20 px-4 md:px-16 bg-cover bg-bottom bg-fixed"
+      className="relative bg-primary/95 py-20 px-4 md:px-16 bg-cover bg-bottom bg-fixed overflow-hidden"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-primary/80 z-10" />
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 relative z-20">
         {/* Left: Flipbook */}
         <div className="space-y-6">
-          <Fade direction="left" duration={800} cascade damping={0.5}>
+          <Fade
+            direction="left"
+            duration={800}
+            cascade
+            damping={0.5}
+            triggerOnce={isMobile}
+          >
             <div className="flex justify-center">
               <HTMLFlipBook
                 ref={bookRef}
-                width={300}
-                height={500}
+                width={isMobile ? 250 : 300}
+                height={isMobile ? 400 : 500}
                 showCover={false}
-                className="shadow-2xl rounded-xl"
+                className="shadow-2xl rounded-xl mx-auto"
                 useMouseEvents={true}
-                flippingTime={1000} // smoother transition
+                flippingTime={1000}
               >
                 {/* Cover Page */}
                 <div
@@ -58,11 +72,11 @@ export default function WhyChooseUs() {
                     "bg-primary text-white border-2 border-black/50 shadow-inner"
                   )}
                 >
-                  <div className="text-center space-y-2 px-4 h-full flex flex-col items-center justify-center ">
+                  <div className="text-center space-y-2 px-4 h-full flex flex-col items-center justify-center">
                     <h2 className="text-xl md:text-2xl font-bold text-white tracking-wide">
                       Our Certifications
                     </h2>
-                    <p className="text-sm ">
+                    <p className="text-sm">
                       These certificates prove our commitment to safety,
                       quality, and environmental responsibility.
                     </p>
@@ -72,25 +86,20 @@ export default function WhyChooseUs() {
                   </div>
                 </div>
 
-                {/* ISO Certificates */}
+                {/* Pages */}
                 {imgs.map((img, i) => (
                   <div key={i} className="bg-white h-full rounded-xl">
                     <img
                       src={img}
                       alt={`Certificate ${i + 1}`}
-                      className="rounded-xl shadow-lg h-full "
+                      className="rounded-xl shadow-lg h-full w-full object-contain"
                     />
                   </div>
                 ))}
 
                 {/* Back Page */}
                 <div className="flex items-center justify-center bg-primary text-white h-full rounded-xl border-2 border-black/50">
-                  <div
-                    className={cn(
-                      "text-center space-y-2 h-full ",
-                      "flex flex-col justify-center"
-                    )}
-                  >
+                  <div className="text-center space-y-2 h-full flex flex-col justify-center">
                     <p className="text-lg md:text-xl">
                       Gulf Seas For Pipes (GSP)
                     </p>
@@ -105,9 +114,9 @@ export default function WhyChooseUs() {
             <div className="text-center">
               <button
                 className={cn(
-                  "mt-6 inline-block text-md  px-4 py-2 rounded-md ",
+                  "mt-6 inline-block text-md px-4 py-2 rounded-md",
                   "text-white font-bold bg-primary border border-white",
-                  "hover:bg-primary hover:border-primary  transition duration-300"
+                  "hover:bg-primary hover:border-primary transition duration-300"
                 )}
               >
                 More Details
@@ -118,15 +127,21 @@ export default function WhyChooseUs() {
 
         {/* Right: Why Choose Us */}
         <div className="space-y-6">
-          <Fade direction="right" duration={800} cascade damping={0.5}>
+          <Fade
+            direction="right"
+            duration={800}
+            cascade
+            damping={0.5}
+            triggerOnce={isMobile}
+          >
             <h3 className="text-3xl font-bold text-white mb-4">
               Why Choose Us ?
             </h3>
-            <div className="space-y-8 text-white text-sm ">
-              <div className="flex gap-2 ">
-                <BadgeCheck></BadgeCheck>
+            <div className="space-y-8 text-white text-sm">
+              <div className="flex gap-2">
+                <BadgeCheck />
                 <div>
-                  <h4 className="text-xl font-semibold ">
+                  <h4 className="text-xl font-semibold">
                     Certified Excellence
                   </h4>
                   <p>
@@ -137,12 +152,12 @@ export default function WhyChooseUs() {
               </div>
 
               <div className="flex gap-2">
-                <Briefcase></Briefcase>
+                <Briefcase />
                 <div>
-                  <h4 className="text-xl font-semibold ">
+                  <h4 className="text-xl font-semibold">
                     Extensive Industry Experience
                   </h4>
-                  <p className="">
+                  <p>
                     Over 20 years of expertise in delivering industrial and
                     construction solutions.
                   </p>
@@ -150,9 +165,9 @@ export default function WhyChooseUs() {
               </div>
 
               <div className="flex gap-2">
-                <Workflow></Workflow>
+                <Workflow />
                 <div>
-                  <h4 className="text-xl font-semibold ">
+                  <h4 className="text-xl font-semibold">
                     End-to-End Solutions
                   </h4>
                   <p>
@@ -163,9 +178,9 @@ export default function WhyChooseUs() {
               </div>
 
               <div className="flex gap-2">
-                <Handshake></Handshake>
+                <Handshake />
                 <div>
-                  <h4 className="text-xl font-semibold ">
+                  <h4 className="text-xl font-semibold">
                     Trusted by Industry Leaders
                   </h4>
                   <p>
@@ -176,24 +191,43 @@ export default function WhyChooseUs() {
               </div>
             </div>
           </Fade>
-          <div className="text-white py-10  flex justify-between font-bold text-6xl">
-            <span className=" p-5 flex justify-center items-center">
-              <CountUp start={0} end={32} duration={1} enableScrollSpy={true}>
+
+          {/* Counters */}
+          <div className="text-white py-10 flex justify-center flex-wrap gap-6 font-bold text-4xl sm:text-5xl md:text-6xl text-center">
+            <span className="p-5 flex items-center">
+              <CountUp
+                start={0}
+                end={32}
+                duration={1}
+                enableScrollSpy={!isMobile}
+              >
                 {({ countUpRef }) => <span ref={countUpRef} />}
               </CountUp>
-              <span className="text-hover">K</span>
+              <span className="text-hover ml-1">K</span>
             </span>
-            <span className=" p-5 flex justify-center items-center">
-              <CountUp start={0} end={250} duration={1} enableScrollSpy={true}>
+
+            <span className="p-5 flex items-center">
+              <CountUp
+                start={0}
+                end={250}
+                duration={1}
+                enableScrollSpy={!isMobile}
+              >
                 {({ countUpRef }) => <span ref={countUpRef} />}
               </CountUp>
-              <span className="text-hover">+</span>
+              <span className="text-hover ml-1">+</span>
             </span>
-            <span className=" p-5 flex justify-center items-center">
-              <CountUp start={0} end={45} duration={1} enableScrollSpy={true}>
+
+            <span className="p-5 flex items-center">
+              <CountUp
+                start={0}
+                end={45}
+                duration={1}
+                enableScrollSpy={!isMobile}
+              >
                 {({ countUpRef }) => <span ref={countUpRef} />}
               </CountUp>
-              <span className="text-hover">m</span>
+              <span className="text-hover ml-1">m</span>
             </span>
           </div>
         </div>

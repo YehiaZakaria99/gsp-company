@@ -1,7 +1,7 @@
 import { Building2, Cable, Pipette, Settings, Wrench } from "lucide-react";
 import { Link } from "react-router";
 import { cn } from "../lib/utils";
-import { Fade, Flip } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const solutions = [
   {
@@ -38,41 +38,47 @@ const solutions = [
 
 export default function OurSolutionsSection() {
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 bg-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <Fade direction="left" duration={800} cascade damping={0.5}>
+        <Fade direction="left" duration={800} cascade damping={0.5} triggerOnce>
           <h3 className="text-3xl font-bold text-primary mb-12">
             Our Solutions
           </h3>
         </Fade>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
-          <Flip direction="vertical" duration={800} cascade damping={0.2}>
-            {solutions.map((solution, idx) => (
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+          {solutions.map((solution, idx) => (
+            <Fade
+              direction="up"
+              duration={600}
+              cascade
+              triggerOnce
+              delay={idx * 100}
+              key={idx}
+            >
               <div
-                key={idx}
                 className={cn(
-                  "bg-white rounded-2xl shadow-md p-6 border-t-4 border-primary text-primary",
-                  "special-style border-t-4 h-full"
+                  "bg-white rounded-2xl shadow-md p-6 border-t-4 h-full border-primary text-primary",
+                  "transition-transform duration-300 transform hover:scale-105"
                 )}
               >
-                <div className="mb-4 flex justify-center">{solution.icon}</div>
-                <h3 className="text-xl font-semibold  mb-2">
-                  {solution.title}
-                </h3>
-                <p className="text-sm">{solution.description}</p>
+                <div className="mb-4 flex justify-center items-center">
+                  {solution.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{solution.title}</h3>
+                <p className="text-sm text-gray-600">{solution.description}</p>
               </div>
-            ))}
-          </Flip>
+            </Fade>
+          ))}
         </div>
-        <Fade direction="left" duration={800}>
+
+        <Fade direction="left" duration={800} triggerOnce>
           <div className="mt-12">
             <Link
               to="/ourSolutions"
               className={cn(
-                "mt-6 inline-block text-md  px-4 py-2 rounded-md ",
-                "font-semibold ",
-                "special-style border"
+                "inline-block text-md px-6 py-2 rounded-md border border-primary text-primary",
+                "hover:bg-primary hover:text-white transition-colors duration-300 font-semibold"
               )}
             >
               More Details
