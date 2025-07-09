@@ -35,6 +35,11 @@ export default function HeroSection() {
     autoplaySpeed: 3000,
     waitForAnimate: false,
     pauseOnHover: false,
+    beforeChange: () => {
+      if (document.activeElement && document.activeElement.blur) {
+        document.activeElement.blur();
+      }
+    },
   };
 
   return (
@@ -85,7 +90,7 @@ export default function HeroSection() {
           </div>
         ))}
       </Slider>
-        <ScrollDown to="leadershipSection" />
+      <ScrollDown to="leadershipSection" />
     </section>
   );
 }

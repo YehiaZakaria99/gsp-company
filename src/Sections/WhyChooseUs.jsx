@@ -176,35 +176,26 @@ export default function WhyChooseUs() {
               </div>
             </div>
           </Fade>
-            <div className="text-white py-10  flex justify-between font-bold text-6xl">
-              <span className=" p-5 flex justify-center items-center">
-                <CountUp
-                  start={0}
-                  end={32}
-                  duration={1}
-                  enableScrollSpy={true}
-                />
-                <span className="text-hover">K</span>
-              </span>
-              <span className=" p-5 flex justify-center items-center">
-                <CountUp
-                  start={0}
-                  end={250}
-                  duration={1}
-                  enableScrollSpy={true}
-                />
-                <span className="text-hover">+</span>
-              </span>
-              <span className=" p-5 flex justify-center items-center">
-                <CountUp
-                  start={0}
-                  end={45}
-                  duration={1}
-                  enableScrollSpy={true}
-                />
-                <span className="text-hover">m</span>
-              </span>
-            </div>
+          <div className="text-white py-10  flex justify-between font-bold text-6xl">
+            <span className=" p-5 flex justify-center items-center">
+              <CountUp start={0} end={32} duration={1} enableScrollSpy={true}>
+                {({ countUpRef }) => <span ref={countUpRef} />}
+              </CountUp>
+              <span className="text-hover">K</span>
+            </span>
+            <span className=" p-5 flex justify-center items-center">
+              <CountUp start={0} end={250} duration={1} enableScrollSpy={true}>
+                {({ countUpRef }) => <span ref={countUpRef} />}
+              </CountUp>
+              <span className="text-hover">+</span>
+            </span>
+            <span className=" p-5 flex justify-center items-center">
+              <CountUp start={0} end={45} duration={1} enableScrollSpy={true}>
+                {({ countUpRef }) => <span ref={countUpRef} />}
+              </CountUp>
+              <span className="text-hover">m</span>
+            </span>
+          </div>
         </div>
       </div>
     </section>

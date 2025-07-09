@@ -1,14 +1,15 @@
 import React from "react";
 import Navbar from "./../../Components/Navbar/Navbar";
 import { Outlet } from "react-router";
+import ScrollUp from './../../Components/Scroll/ScrollUp';
+import ContactUs from './../../Components/ContactUs/ContactUs';
 
 export default function Layout() {
   return (
-    <div>
+    <div className="relative">
       <Navbar />
-        <Outlet />
-      {/* <div className="h-screen flex items-center justify-center">
-      </div> */}
+      <Outlet />
+      <ContactUs />
     </div>
   );
 }

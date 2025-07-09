@@ -45,6 +45,11 @@ export default function GSPIntroduction() {
     pauseOnHover: true,
     fade: true,
     cssEase: "ease-in-out",
+    beforeChange: () => {
+      if (document.activeElement && document.activeElement.blur) {
+        document.activeElement.blur();
+      }
+    },
   };
 
   return (
@@ -68,7 +73,10 @@ export default function GSPIntroduction() {
 
       {/* Slider Section */}
       <div className="px-6 md:px-16">
-        <Slider {...settings} className="space-y-4 rounded-2xl border-t-4 border-primary bg-white shadow-sm shadow-primary ">
+        <Slider
+          {...settings}
+          className="space-y-4 rounded-2xl border-t-4 border-primary bg-white shadow-sm shadow-primary "
+        >
           {introData.map(({ h2, p, img }, key) => (
             <div key={key} className="">
               <div className="transition-all duration-1000 ease-in-out px-4 py-8   flex flex-col md:flex-row items-center gap-6">
@@ -79,7 +87,7 @@ export default function GSPIntroduction() {
                   className="w-full md:w-[400px] h-[250px] rounded-xl shadow-lg object-cover"
                 />
                 <div className="text-primary text-lg leading-relaxed font-semibold">
-                  <p className="whitespace-pre-line md:w-[700px]">{p}</p>
+                  <p className="whitespace-pre-line  xl:w-[700px]">{p}</p>
                 </div>
               </div>
             </div>
