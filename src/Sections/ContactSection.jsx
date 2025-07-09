@@ -33,21 +33,21 @@ export default function ContactSection() {
             </div>
             <div className="flex items-center gap-3 text-primary">
               {/* <FaEnvelope />{" "} */}
-              <a href="mailto:Info@greatshieldegypt.com">
+              {/* <a href="mailto:Info@greatshieldegypt.com">
                 <span>Info@greatshieldegypt.com</span>
-              </a>
+              </a> */}
             </div>
             <div className="flex items-center gap-3 text-primary">
               {/* <FaPhoneAlt />{" "} */}
-              <a href="https://wa.me/201040391955" target="_blank">
+              {/* <a href="https://wa.me/201040391955" target="_blank">
                 <span>+201040391955</span>
-              </a>
+              </a> */}
             </div>
             <div className="flex items-center gap-3 text-primary">
               {/* <FaLocationArrow />{" "} */}
-              <span>
+              {/* <span>
                 Banks Center St, New Cairo 1, Cairo Governorate, Egypt
-              </span>
+              </span> */}
             </div>
           </div>
           <div className="py-10" data-aos="fade-up">
