@@ -10,10 +10,14 @@ import {
   Legend,
 } from "recharts";
 import financialStatusData from "../../Data/financialStatusData.json";
+import { useEffect } from "react";
 
 const { financialData } = financialStatusData;
 
 export default function FinancialStatus() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const label = Object.entries(financialData[0]).filter(
     ([key, value]) => typeof value == "number"
   );

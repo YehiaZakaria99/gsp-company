@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import mainImg from "/AboutPages/owned-machines/img.webp";
 import {
   PieChart,
@@ -27,6 +27,9 @@ const COLORS = [
 ];
 
 export default function OwnedMachines() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const topMachines = ownedMachinesData
     .sort((a, b) => b.quantity - a.quantity)
     .slice(0, 6);

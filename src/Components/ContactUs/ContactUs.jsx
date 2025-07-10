@@ -47,7 +47,7 @@ export default function ContactUs() {
           </div>
           <div className="p-4 text-sm">
             <Link
-              to={"conact"}
+              to={"contact"}
               className={cn(
                 "contact",
                 "cursor-pointer",

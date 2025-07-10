@@ -9,8 +9,12 @@ import electricalImg from "/OurSolutionsPage/electrical-solutions.webp";
 import technicalImg from "/OurSolutionsPage/technical-solutions.webp";
 
 import { cn } from "../../lib/utils";
+import { useEffect } from "react";
 
 export default function OurSolutionsPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const solutions = [
     {
       id: 0,
@@ -50,7 +54,11 @@ PLC panels & instrumentation
 
 `,
     },
-    { id: 4, img: technicalImg , title: "Technical Solutions", description: `
+    {
+      id: 4,
+      img: technicalImg,
+      title: "Technical Solutions",
+      description: `
       Automation Systems,
       Fire Alarm Systems,
       Data Networking & Structured Cabling (Telephone & Data),
@@ -66,7 +74,8 @@ PLC panels & instrumentation
       Intrusion Alarm System,
       Nurse Call System.
 
-` },
+`,
+    },
   ];
   return (
     <>
@@ -105,7 +114,6 @@ PLC panels & instrumentation
               index={index}
             />
           ))}
-
         </section>
       </section>
     </>

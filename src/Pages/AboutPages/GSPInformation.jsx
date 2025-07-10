@@ -4,13 +4,16 @@ import bgImg from "/AboutPages/gsp-information/bgImg.webp";
 import { cn } from "./../../lib/utils";
 
 import informationData from "../../Data/informationData.json";
+import { useEffect } from "react";
 
 const { infoData } = informationData;
 
 export default function GSPInformation() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="bg-primary/20 py-20">
-      {/* Background Blur Circles */}
       {/* Header */}
       <div
         className="relative px-6 md:px-16 py-10 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 bg-cover h-[300px] md:h-[450px] lg:h-[500px] md:bg-fixed bg-bottom shadow-xl overflow-hidden"

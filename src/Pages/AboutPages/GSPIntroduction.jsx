@@ -5,8 +5,12 @@ import pipeImg from "/AboutPages/gsp-introduction/pipelines-solutions.webp";
 import teamImg from "/AboutPages/gsp-introduction/team.webp";
 import img3 from "/AboutPages/gsp-introduction/img3.webp";
 import img4 from "/AboutPages/gsp-introduction/img4.webp";
+import { useEffect } from "react";
 
 export default function GSPIntroduction() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const introData = [
     {
       img: pipeImg,

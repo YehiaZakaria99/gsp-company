@@ -4,23 +4,34 @@ import VideoPlayer from "./../Components/LeaderShipComponent/VideoPlayer";
 import { NavLink } from "react-router";
 import chairmanImg from "/AboutPages/LeadershipPage/owner.webp";
 import { Fade, Slide } from "react-awesome-reveal";
-import ScrollDown from "../Components/Scroll/ScrollDown";
 
 export default function LeadershipSection() {
   return (
     <>
-      <section id="leadershipSection" className="py-20 bg-white relative overflow-hidden">
+      <section
+        id="leadershipSection"
+        className="py-20 bg-white relative overflow-hidden"
+      >
         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-10 ">
           {/* // { Left - ImagesorVideo } */}
 
           <div className="w-full lg:w-1/2 space-y-4">
             <Fade direction="left" duration={800} cascade damping={1}>
-              <div className="relative rounded-xl overflow-hidden shadow-lg">
+              <div className="group relative rounded-xl overflow-hidden shadow-lg border-2 border-primary">
                 <img
                   loading="lazy"
                   src={img1}
                   alt="team"
-                  className="w-full object-center object-cover h-[250px]"
+                  className={cn(
+                    "w-full object-center object-cover h-[250px]",
+                    "transition-all duration-500 group-hover:scale-110"
+                  )}
+                />
+                <div
+                  className={cn(
+                    "absolute inset-0 z-10 bg-hover/20",
+                    "transition duration-300 group-hover:bg-transparent"
+                  )}
                 />
               </div>
               <p className="text-4xl font-bold text-primary">
@@ -130,7 +141,7 @@ export default function LeadershipSection() {
               </div>
             </div>
           </div>
-        {/* Scroll Button */}
+          {/* Scroll Button */}
         </div>
         {/* <ScrollDown to="leadershipSection" /> */}
       </section>

@@ -36,11 +36,12 @@ export default function VideoPlayer() {
         controls={false}
         
       />
-
+{/* "absolute inset-0 z-10 ",
+                    "transition duration-300 group-hover:bg-transparent" */}
       {!isPlaying && (
         <button
           onClick={handlePlayPause}
-          className="absolute inset-0 flex items-center justify-center bg-primary/40 hover:bg-primary/80 transition"
+          className="absolute inset-0 flex items-center justify-center bg-primary/40 hover:bg-hover/20 transition"
         >
           <div className="bg-primary text-white p-4 rounded-full shadow-lg hover:scale-105 transition-transform">
             <Play className="w-6 h-6" />

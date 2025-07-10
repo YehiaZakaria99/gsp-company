@@ -2,8 +2,12 @@ import { Fade, Slide } from "react-awesome-reveal";
 import { cn } from "../../lib/utils";
 import bgImg from "/AboutPages/LeadershipPage/img.webp";
 import chairmanImg from "/AboutPages/LeadershipPage/owner.webp";
+import { useEffect } from "react";
 
 export default function LeadershipPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section className="leadership-page py-20 bg-primary/20 ">
@@ -20,11 +24,11 @@ export default function LeadershipPage() {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-hover/30 to-primary/80 z-10 animate-fade-in" />
             <div className="md:w-1/2 space-y-4 z-20 text-center md:text-left">
-            <Fade duration={800} direction="left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-bg tracking-tight leading-tight drop-shadow-xl">
-                Leadership
-              </h1>
-            </Fade>
+              <Fade duration={800} direction="left">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-bg tracking-tight leading-tight drop-shadow-xl">
+                  Leadership
+                </h1>
+              </Fade>
             </div>
           </div>
         </section>

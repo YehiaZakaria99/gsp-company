@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import mainImg from "/AboutPages/our-man-power/team.webp";
 import {
   PieChart,
@@ -27,6 +27,9 @@ const COLORS = [
 ];
 
 export default function OurManPower() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   let total = 0;
   function calcTotal() {
     manpowerData.forEach((man) => (total += +man.total));
@@ -65,7 +68,9 @@ export default function OurManPower() {
                   <tr>
                     <th className="px-4 py-3">#</th>
                     {Object.entries(manpowerData[0]).map(([label], index) => (
-                        <th key={index} className="px-4 py-3 capitalize">{label}</th>
+                      <th key={index} className="px-4 py-3 capitalize">
+                        {label}
+                      </th>
                     ))}
                   </tr>
                 </thead>

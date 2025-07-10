@@ -10,6 +10,11 @@ import WhyChooseUs from "./../../Sections/WhyChooseUs";
 import ContactSection from "../../Sections/ContactSection";
 
 export default function HomePage() {
+
+      useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
   const [isScrolled, setIsScrolled] = useState(false);
 
   function handleScroll() {
@@ -28,6 +33,8 @@ export default function HomePage() {
       document.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  
   return (
     <>
       <div className={cn("relative", "", "")}>
