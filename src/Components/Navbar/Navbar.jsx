@@ -70,7 +70,7 @@ export default function Navbar() {
                       ref={aboutMenuRef}
                       state={isAboutDropdownOpen}
                       setState={setIsAboutDropdownOpen}
-                      setIsMenuOpen = {setIsMenuOpen}
+                      setIsMenuOpen={setIsMenuOpen}
                       item={item}
                       isMobile={false}
                     />
@@ -109,44 +109,3 @@ export default function Navbar() {
     </>
   );
 }
-
-/* 
-
-          <div
-            className="relative group"
-            onMouseEnter={() => setIsDropdownOpen("about")}
-            onMouseLeave={() => setIsDropdownOpen(false)}
-          >
-            <button className="flex items-center gap-1 hover:text-mainColor transition duration-300">
-              About{" "}
-              {isDropdownOpen === "about" ? (
-                <ChevronUp size={20} />
-              ) : (
-                <ChevronDown size={20} />
-              )}
-            </button>
-            <div
-              className={`absolute top-full mt-2 bg-navBg rounded-md shadow-lg overflow-hidden transition-all duration-300 ${
-                isDropdownOpen === "about"
-                  ? "opacity-100 visible translate-y-0"
-                  : "opacity-0 invisible -translate-y-2"
-              }`}
-            >
-              <NavLink
-                to="/about/overview"
-                className="block px-4 py-2 hover:text-mainColor transition whitespace-nowrap duration-300"
-                onClick={() => setIsDropdownOpen(false)}
-              >
-                Overview
-              </NavLink>
-              <NavLink
-                to="/about/leadership"
-                className="block px-4 py-2 hover:text-mainColor transition whitespace-nowrap duration-300"
-                onClick={() => setIsDropdownOpen(false)}
-              >
-                Leadership
-              </NavLink>
-            </div>
-          </div>
-
-*/

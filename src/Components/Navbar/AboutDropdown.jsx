@@ -65,6 +65,7 @@ export default function AboutDropdown({
           >
             {item.aboutList.map((subItem, subIndex) => (
               <NavLink
+                aria-label={subItem.name}
                 key={subIndex}
                 to={subItem.to}
                 onClick={() => {
