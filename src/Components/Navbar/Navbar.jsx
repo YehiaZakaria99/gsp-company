@@ -77,6 +77,7 @@ export default function Navbar() {
                   </>
                 ) : (
                   <NavLink
+                    aria-label={item.name}
                     to={item.to}
                     className="text-primary font-bold hover:text-hover transition-colors duration-300 flex items-center"
                   >

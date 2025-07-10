@@ -48,13 +48,14 @@ export default function NavbarMobile({ navItems, isMenuOpen, setIsMenuOpen }) {
                     ref={aboutMenuMobileRef}
                     state={isAboutDropdownOpenMobile}
                     setState={setIsAboutDropdownOpenMobile}
-                    setIsMenuOpen = {setIsMenuOpen}
+                    setIsMenuOpen={setIsMenuOpen}
                     item={item}
                     isMobile={true}
                   />
                 </>
               ) : (
                 <NavLink
+                  aria-label={item.name}
                   key={index}
                   to={item.to}
                   className="hover:text-hover transition duration-300 py-4 inline-flex"
