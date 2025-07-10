@@ -34,6 +34,7 @@ export default function VideoPlayer() {
         muted
         playsInline
         controls={false}
+        
       />
 
       {!isPlaying && (

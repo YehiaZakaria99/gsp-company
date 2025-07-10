@@ -62,6 +62,8 @@ export default function ContactUs() {
       </div>
 
       <button
+        id="contactBtn"
+        aria-label="contact"
         onClick={handleMenu}
         className={cn(
           "call bg-white w-16 h-16 cursor-pointer",

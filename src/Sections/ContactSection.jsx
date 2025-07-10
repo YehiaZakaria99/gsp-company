@@ -3,7 +3,7 @@ import { Link } from "react-router";
 export default function ContactSection() {
   return (
     <>
-      <section className="bg-navBg py-16 px-4 lg:px-32 overflow-hidden">
+      <section className="bg-navBg py-16 px-4 lg:px-32 overflow-hidden relative">
         <div className="max-w-3xl mx-auto text-center">
           <h3
             className="text-3xl font-bold text-primary mb-4"
@@ -23,6 +23,7 @@ export default function ContactSection() {
               data-aos-easing="ease-in-out"
             >
               <iframe
+              title="gspLocation"
                 className="w-full h-full rounded-2xl shadow-lg"
                 src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d915417.7871715222!2d49.758230847358675!3d26.331332553463806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d30.0192266!2d31.2727774!4m5!1s0x3e49e9b296d1f973%3A0xa03ccdc4c9c1c993!2sAL%20BANDARIYAH%20TOWER%2C%208627%2BWMG%2C%20Al%20Bandariyah%2C%20Al%20Khobar%2034424%2C%20Saudi%20Arabia!3m2!1d26.302312999999998!2d50.214204699999996!5e0!3m2!1sen!2seg!4v1752067534992!5m2!1sen!2seg"
                 // style="border:0;"

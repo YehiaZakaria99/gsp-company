@@ -40,23 +40,17 @@ export default function OurSolutionsSection() {
   return (
     <section className="py-16 bg-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <Fade direction="left" duration={800} cascade damping={0.5} triggerOnce>
+        <Fade direction="left" duration={800} cascade damping={0.5}>
           <h3 className="text-3xl font-bold text-primary mb-12">
             Our Solutions
           </h3>
         </Fade>
 
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-          {solutions.map((solution, idx) => (
-            <Fade
-              direction="up"
-              duration={600}
-              cascade
-              triggerOnce
-              delay={idx * 100}
-              key={idx}
-            >
+          <Fade duration={800} cascade damping={0.2}>
+            {solutions.map((solution, idx) => (
               <div
+                key={idx}
                 className={cn(
                   "bg-white rounded-2xl shadow-md p-6 border-t-4 h-full border-primary text-primary",
                   "transition-transform duration-300 transform hover:scale-105"
@@ -68,11 +62,11 @@ export default function OurSolutionsSection() {
                 <h3 className="text-xl font-semibold mb-2">{solution.title}</h3>
                 <p className="text-sm text-gray-600">{solution.description}</p>
               </div>
-            </Fade>
-          ))}
+            ))}
+          </Fade>
         </div>
 
-        <Fade direction="left" duration={800} triggerOnce>
+        <Fade direction="left" duration={800}>
           <div className="mt-12">
             <Link
               to="/ourSolutions"

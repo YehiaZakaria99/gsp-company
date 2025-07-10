@@ -79,9 +79,9 @@ export default function HeroSection() {
                     />
                   </h1>
 
-                  <h3 className="text-white text-xl md:text-3xl font-bold overflow-hidden">
+                  <h2 className="text-white text-xl md:text-3xl font-bold overflow-hidden">
                     Expertise in construction and pipeline solutions
-                  </h3>
+                  </h2>
                 </Fade>
               </div>
 
