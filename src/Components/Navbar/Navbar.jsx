@@ -30,8 +30,8 @@ export default function Navbar() {
       to: "about",
       aboutList: [
         { name: "Leadership", to: "about/leadership" },
-        { name: "Introduction", to: "about/gsp-introduction" },
-        { name: "Information", to: "about/gsp-information" },
+        { name: "Introduction", to: "about/introduction" },
+        { name: "Information", to: "about/information" },
         { name: "Organizational Chart", to: "/about/organizational-chart" },
         { name: "Our Man Power", to: "/about/our-man-power" },
         { name: "Owned Machines", to: "/about/owned-machines" },

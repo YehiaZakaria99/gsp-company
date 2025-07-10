@@ -32,8 +32,8 @@ function App() {
           element: <AboutPage />,
           children: [
             { path: "/about/leadership", element: <LeadershipPage /> },
-            { path: "/about/gsp-introduction", element: <GSPIntroduction /> },
-            { path: "/about/gsp-information", element: <GSPInformation /> },
+            { path: "/about/introduction", element: <GSPIntroduction /> },
+            { path: "/about/information", element: <GSPInformation /> },
             { path: "/about/organizational-chart", element: <OrganizationalChart /> },
             { path: "/about/our-man-power", element: <OurManPower /> },
             { path: "/about/owned-machines", element: <OwnedMachines /> },
