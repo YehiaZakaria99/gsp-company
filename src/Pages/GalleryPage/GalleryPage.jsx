@@ -7,10 +7,14 @@ import img3 from "/GalleryPage/3.webp";
 import img4 from "/GalleryPage/4.webp";
 import img44 from "/GalleryPage/44.webp";
 import { Fade } from "react-awesome-reveal";
+import { useEffect } from "react";
 
 const images = [img1, img2, img3, img4, img44, img1, img2, img3, img4];
 
 export default function GalleryPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="bg-primary/20 py-20">
       {/* Header */}

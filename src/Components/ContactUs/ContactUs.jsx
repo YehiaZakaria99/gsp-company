@@ -16,7 +16,7 @@ export default function ContactUs() {
     <>
       <div
         className={cn(
-          "fixed z-[9999999] group top-1/2 left-1 -translate-y-1/2 bg-white ",
+          "fixed z-[9999999] group top-1/2 left-1 -translate-y-1/2 ",
           "font-bold text-primary rounded-lg",
           "border-2 border-primary",
           "transition-all duration-300",
@@ -31,7 +31,12 @@ export default function ContactUs() {
             // "transform"
           )}
         >
-          <div className="p-4 border-b-2 border-primary">
+          <div
+            className={cn(
+              "p-4 border-b-2 bg-white border-primary",
+              "transition-all duration-300 hover:bg-primary hover:text-white hover:border-white"
+            )}
+          >
             <a
               href="tel:+966 13 881 3042"
               rel="noopener noreferrer"
@@ -45,7 +50,12 @@ export default function ContactUs() {
               <span className="text-sm my-2">+966 13 881 3042</span>
             </a>
           </div>
-          <div className="p-4 text-sm">
+          <div
+            className={cn(
+              "p-4 text-sm bg-white",
+              "transition-all duration-300 hover:bg-primary hover:text-white hover:border-white"
+            )}
+          >
             <Link
               to={"contact"}
               className={cn(
