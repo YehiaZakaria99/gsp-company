@@ -53,7 +53,7 @@ export default function ContactUs() {
           <div
             className={cn(
               "p-4 text-sm bg-white",
-              "transition-all duration-300 hover:bg-primary hover:text-white hover:border-white"
+              "transition-all duration-300 hover:bg-primary hover:text-white"
             )}
           >
             <Link

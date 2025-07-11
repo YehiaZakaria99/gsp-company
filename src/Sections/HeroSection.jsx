@@ -63,7 +63,7 @@ export default function HeroSection() {
 
               {/* Content */}
               <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 ">
-                <Fade direction="up" duration={800} cascade damping={1}>
+                <Fade direction="up" duration={800} cascade damping={1} triggerOnce>
                   <h1 className="text-bg-hero text-3xl md:text-5xl my-8 font-extrabold tracking-wide overflow-hidden min-h-[3rem] md:min-h-[4rem]">
                     <TypeAnimation
                       sequence={[

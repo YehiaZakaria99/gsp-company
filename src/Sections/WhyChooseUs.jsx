@@ -52,7 +52,8 @@ export default function WhyChooseUs() {
             duration={800}
             cascade
             damping={0.5}
-            triggerOnce={isMobile}
+            triggerOnce
+            
           >
             <div className="flex justify-center">
               <HTMLFlipBook
@@ -132,7 +133,7 @@ export default function WhyChooseUs() {
             duration={800}
             cascade
             damping={0.5}
-            triggerOnce={isMobile}
+            triggerOnce
           >
             <h3 className="text-3xl font-bold text-white mb-4">
               Why Choose Us ?

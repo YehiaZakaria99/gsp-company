@@ -50,6 +50,7 @@ export default function AboutSection() {
             delay={200}
             cascade
             damping={0.5}
+            triggerOnce
           >
             <h3 className="font-bold text-3xl text-primary text-center">
               About Us
@@ -61,7 +62,7 @@ export default function AboutSection() {
           </Fade>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <Fade duration={800} cascade damping={0.2}>
+            <Fade duration={800} cascade damping={0.2} triggerOnce>
               {sections.map((section, key) => (
                 <NavLink
                   key={key}

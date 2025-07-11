@@ -40,8 +40,8 @@ export default function ContactSection() {
           {/* Email */}
           <div
             className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-primary flex flex-col items-center gap-3"
-            data-aos="fade-up"
-            data-aos-delay="100"
+            // data-aos="fade-up"
+            // data-aos-delay="100"
           >
             <div className="bg-mainColor text-navBg p-3 rounded-full">
               <Mail size={24} />
