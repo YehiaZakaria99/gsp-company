@@ -1,17 +1,14 @@
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import bgImg from "/GalleryPage/bgImg.webp";
-import img1 from "/GalleryPage/1.webp";
-import img2 from "/GalleryPage/2.webp";
-import img3 from "/GalleryPage/3.webp";
-import img4 from "/GalleryPage/4.webp";
-import img44 from "/GalleryPage/44.webp";
-import { Fade } from "react-awesome-reveal";
-import { useEffect } from "react";
 
-const images = [img1, img2, img3, img4, img44, img1, img2, img3, img4];
+import { Fade } from "react-awesome-reveal";
+import { useContext, useEffect } from "react";
+import { galleryContext } from "../../Context/GalleryContext";
+import { cn } from "../../lib/utils";
 
 export default function GalleryPage() {
+  const { galleryImages } = useContext(galleryContext);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -31,17 +28,23 @@ export default function GalleryPage() {
       </div>
       <div className="container mx-auto px-4 py-5">
         <PhotoProvider>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <Fade cascade damping={0.2} duration={800} triggerOnce>
-              {images.map((src, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-y-hidden">
+            <Fade  direction="up" duration={1500} triggerOnce fraction={0}>
+              {galleryImages.map((src, index) => (
                 <PhotoView key={index} src={src}>
-                  <div className="group rounded-lg overflow-hidden shadow-md shadow-primary h-full border border-primary">
+                  <div className="relative group rounded-lg overflow-hidden shadow-md shadow-primary h-full border border-primary cursor-pointer">
                     <img
                       src={src}
                       alt={`Gallery ${index + 1}`}
                       loading="lazy"
-                      className=" cursor-pointer transition-transform h-full duration-300 group-hover:scale-110"
+                      className=" cursor-pointer transition-transform h-full duration-500 group-hover:scale-125"
                     />
+                    <div
+                      className={cn(
+                        "absolute inset-0 z-10 bg-hover/25",
+                        "transition duration-500 group-hover:bg-transparent"
+                      )}
+                    ></div>
                   </div>
                 </PhotoView>
               ))}

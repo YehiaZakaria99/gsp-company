@@ -1,5 +1,5 @@
 import { cn } from "../lib/utils";
-import img1 from "/HomePage/LeadershipSection/img1.webp";
+import img02 from "/GalleryPage/02.webp";
 import VideoPlayer from "./../Components/LeaderShipComponent/VideoPlayer";
 import { NavLink } from "react-router";
 import chairmanImg from "/AboutPages/LeadershipPage/owner.webp";
@@ -16,11 +16,17 @@ export default function LeadershipSection() {
           {/* // { Left - ImagesorVideo } */}
 
           <div className="w-full lg:w-1/2 space-y-4">
-            <Fade direction="left" duration={800} cascade damping={1} triggerOnce>
+            <Fade
+              direction="left"
+              duration={800}
+              cascade
+              damping={1}
+              triggerOnce
+            >
               <div className="group relative rounded-xl overflow-hidden shadow-lg border-2 border-primary">
                 <img
                   loading="lazy"
-                  src={img1}
+                  src={img02}
                   alt="team"
                   className={cn(
                     "w-full object-center object-cover h-[250px]",
@@ -32,7 +38,7 @@ export default function LeadershipSection() {
                     "absolute inset-0 z-10 bg-hover/20",
                     "transition duration-300 group-hover:bg-transparent"
                   )}
-                />
+                ></div>
               </div>
               <p className="text-4xl font-bold text-primary">
                 22+
@@ -64,7 +70,12 @@ export default function LeadershipSection() {
               <div className="flex flex-col lg:flex-row gap-6">
                 {/*Highlights + CTA */}
                 <div className="w-full lg:w-1/2 space-y-4">
-                  <Fade direction="right" duration={600} delay={400} triggerOnce>
+                  <Fade
+                    direction="right"
+                    duration={600}
+                    delay={400}
+                    triggerOnce
+                  >
                     <ul className="space-y-2 text-gray-700">
                       {[
                         "Multi-Speciality Company",
@@ -79,7 +90,12 @@ export default function LeadershipSection() {
                     </ul>
                   </Fade>
 
-                  <Fade direction="right" duration={600} delay={600} triggerOnce>
+                  <Fade
+                    direction="right"
+                    duration={600}
+                    delay={600}
+                    triggerOnce
+                  >
                     <NavLink
                       to="about/leadership"
                       className={cn(
@@ -91,7 +107,12 @@ export default function LeadershipSection() {
                     </NavLink>
                   </Fade>
 
-                  <Fade direction="right" duration={600} delay={800} triggerOnce>
+                  <Fade
+                    direction="right"
+                    duration={600}
+                    delay={800}
+                    triggerOnce
+                  >
                     <div className="space-y-6">
                       {/* Chairman */}
                       <div className="flex items-center gap-4">
@@ -134,7 +155,12 @@ export default function LeadershipSection() {
 
                 {/* Video */}
                 <div className="w-full lg:w-1/2 py-5">
-                  <Fade direction="right" duration={600} delay={1000} triggerOnce>
+                  <Fade
+                    direction="right"
+                    duration={600}
+                    delay={1000}
+                    triggerOnce
+                  >
                     <VideoPlayer />
                   </Fade>
                 </div>

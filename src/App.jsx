@@ -19,6 +19,7 @@ import OurManPower from "./Pages/AboutPages/OurManPower";
 import OwnedMachines from "./Pages/AboutPages/OwnedMachines";
 import FinancialStatus from "./Pages/AboutPages/FinancialStatus";
 import LeadershipPage from "./Pages/AboutPages/LeadershipPage";
+import GalleryContextProvider from "./Context/GalleryContext";
 
 function App() {
   const routers = createBrowserRouter([
@@ -34,7 +35,10 @@ function App() {
             { path: "/about/leadership", element: <LeadershipPage /> },
             { path: "/about/introduction", element: <GSPIntroduction /> },
             { path: "/about/information", element: <GSPInformation /> },
-            { path: "/about/organizational-chart", element: <OrganizationalChart /> },
+            {
+              path: "/about/organizational-chart",
+              element: <OrganizationalChart />,
+            },
             { path: "/about/our-man-power", element: <OurManPower /> },
             { path: "/about/owned-machines", element: <OwnedMachines /> },
             { path: "/about/financial-status", element: <FinancialStatus /> },
@@ -42,7 +46,14 @@ function App() {
         },
         { path: "ourSolutions", element: <OurSolutionsPage /> },
         { path: "ourExperience", element: <OurExperiencePage /> },
-        { path: "gallery", element: <GalleryPage /> },
+        {
+          path: "gallery",
+          element: (
+            <GalleryContextProvider>
+              <GalleryPage />
+            </GalleryContextProvider>
+          ),
+        },
         { path: "contact", element: <ContactPage /> },
         { path: "*", element: <NotFoundPage /> },
       ],

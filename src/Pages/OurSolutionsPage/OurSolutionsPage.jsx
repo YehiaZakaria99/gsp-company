@@ -2,11 +2,11 @@ import OurSolutionsPageCard from "./../../Components/OurSolutionsComponents/OurS
 
 import bgImg from "/OurSolutionsPage/bgImg.webp";
 
-import constructionImg from "/OurSolutionsPage/construction-solutions.webp";
-import pipelinesImg from "/OurSolutionsPage/pipelines-solutions.webp";
-import mechanicalImg from "/OurSolutionsPage/mechanical-solutions.webp";
-import electricalImg from "/OurSolutionsPage/electrical-solutions.webp";
-import technicalImg from "/OurSolutionsPage/technical-solutions.webp";
+import constructionImg from "/GalleryPage/33.webp";
+import pipelinesImg from "/GalleryPage/35.webp";
+import mechanicalImg from "/GalleryPage/31.webp";
+import electricalImg from "/GalleryPage/34.webp";
+import technicalImg from "/GalleryPage/32.webp";
 
 import { cn } from "../../lib/utils";
 import { useEffect } from "react";

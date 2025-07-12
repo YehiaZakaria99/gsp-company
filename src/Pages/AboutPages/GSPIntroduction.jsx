@@ -1,10 +1,10 @@
 import Slider from "react-slick";
 // images
 import mainImg from "/AboutPages/gsp-introduction/introduction.webp";
-import pipeImg from "/AboutPages/gsp-introduction/pipelines-solutions.webp";
-import teamImg from "/AboutPages/gsp-introduction/team.webp";
-import img3 from "/AboutPages/gsp-introduction/img3.webp";
-import img4 from "/AboutPages/gsp-introduction/img4.webp";
+import pipeImg from "/GalleryPage/36.webp";;
+import teamImg from "/GalleryPage/37.webp";;
+import img3 from "/GalleryPage/25.webp";
+import img4 from "/GalleryPage/17.webp";
 import { useEffect } from "react";
 
 export default function GSPIntroduction() {

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import mainImg from "/AboutPages/our-man-power/team.webp";
+import mainImg from "/GalleryPage/37.webp";
 import {
   PieChart,
   Pie,
