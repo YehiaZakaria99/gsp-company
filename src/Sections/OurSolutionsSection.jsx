@@ -11,7 +11,16 @@ const solutions = [
       "Comprehensive civil and construction services tailored to industrial needs.",
   },
   {
-    icon: <Pipette size={36} />,
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="36px"
+        viewBox="0 0 48 48"
+        fill="currentColor"
+      >
+        <path d="M40,30a2,2,0,0,0-2,2v1H22a2,2,0,0,1,0-4h4A12,12,0,0,0,26,5H10V4A2,2,0,0,0,6,4V16a2,2,0,0,0,4,0V15H26a2,2,0,0,1,0,4H22a12,12,0,0,0,0,24H38v1a2,2,0,0,0,4,0V32A2,2,0,0,0,40,30Z" />
+      </svg>
+    ),
     title: "Pipelines Solutions",
     description:
       "Expertise in pipeline installation, maintenance, and inspection.",
@@ -53,14 +62,14 @@ export default function OurSolutionsSection() {
                 key={idx}
                 className={cn(
                   "bg-white rounded-2xl shadow-md p-6 border-t-4 h-full border-primary text-primary",
-                  "transition-transform duration-300 transform hover:scale-105"
+                  "transition-all duration-300 transform hover:scale-105 hover:bg-primary hover:text-white"
                 )}
               >
                 <div className="mb-4 flex justify-center items-center">
                   {solution.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{solution.title}</h3>
-                <p className="text-sm text-gray-600">{solution.description}</p>
+                <p className="text-sm ">{solution.description}</p>
               </div>
             ))}
           </Fade>
