@@ -8,21 +8,21 @@ import OurSolutionsSection from "../../Sections/OurSolutionsSection";
 import HeroSection from "./../../Sections/HeroSection";
 import WhyChooseUs from "./../../Sections/WhyChooseUs";
 import ContactSection from "../../Sections/ContactSection";
+import GallerySection from "./../../Sections/GallerySection";
+import GalleryContextProvider from "../../Context/GalleryContext";
 
 export default function HomePage() {
-
-      useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [isScrolled, setIsScrolled] = useState(false);
 
   function handleScroll() {
     if (window.scrollY >= 200) {
       setIsScrolled(true);
-    } else{
+    } else {
       setIsScrolled(false);
-
     }
   }
 
@@ -34,7 +34,6 @@ export default function HomePage() {
     };
   }, []);
 
-  
   return (
     <>
       <div className={cn("relative", "", "")}>
@@ -44,6 +43,11 @@ export default function HomePage() {
         <AboutSection />
         <WhyChooseUs />
         <OurSolutionsSection />
+
+        <GalleryContextProvider>
+          <GallerySection />
+        </GalleryContextProvider>
+
         <ContactSection />
 
         {isScrolled && <ScrollUp to="heroSection" />}

@@ -11,19 +11,19 @@ export default function ContactSection() {
 
       <div className="relative z-10 max-w-6xl mx-auto text-center">
         {/* header */}
-        <h2
-          className="text-3xl md:text-4xl font-bold text-primary mb-4"
-          data-aos="fade-up"
-        >
-          Get In Touch
-        </h2>
-        <p
-          className="text-lg md:text-xl text-primary/80 mb-12 max-w-2xl mx-auto"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          Have a question or need assistance? We're just one message away.
-        </p>
+        <div className="mb-12">
+          <h3 className="text-3xl md:text-4xl font-extrabold text-primary tracking-wide mb-2">
+            Get In Touch
+          </h3>
+          <div className="w-24 h-[3px] bg-primary mx-auto" />
+          <p
+            className="text-lg md:text-xl text-primary/80 mb-12 max-w-2xl mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Have a question or need assistance? We're just one message away.
+          </p>
+        </div>
 
         {/* map */}
         <div

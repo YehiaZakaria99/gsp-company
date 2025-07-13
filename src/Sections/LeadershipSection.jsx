@@ -54,9 +54,12 @@ export default function LeadershipSection() {
             <div className="space-y-4">
               {/* Header */}
               <Fade direction="right" duration={600} triggerOnce>
-                <h2 className="text-2xl md:text-3xl font-bold text-primary">
+                <div className="mb-12">
+                  <h3 className="text-3xl md:text-4xl font-extrabold text-primary tracking-wide mb-2">
                   Leadership to Inspire & Encourage
-                </h2>
+                  </h3>
+                  {/* <div className="w-40 h-[3px] bg-primary mx-auto" /> */}
+                </div>
               </Fade>
 
               {/* Quote */}

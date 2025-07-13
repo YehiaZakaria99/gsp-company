@@ -135,9 +135,16 @@ export default function WhyChooseUs() {
             damping={0.5}
             triggerOnce
           >
-            <h3 className="text-3xl font-bold text-white mb-4">
+          <div className="mb-12">
+            <h3 className="text-3xl  md:text-4xl font-extrabold text-white tracking-wide mb-2">
               Why Choose Us ?
             </h3>
+            <div className="w-24 h-[3px] bg-white " />
+          </div>
+{/*             
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Why Choose Us ?
+            </h3> */}
             <div className="space-y-8 text-white text-sm">
               <div className="flex gap-2">
                 <BadgeCheck />

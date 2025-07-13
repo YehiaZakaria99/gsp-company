@@ -1,4 +1,4 @@
-import { Building2, Cable, Pipette, Settings, Wrench } from "lucide-react";
+import { ArrowRight, Building2, Cable, Pipette, Settings, Wrench } from "lucide-react";
 import { Link } from "react-router";
 import { cn } from "../lib/utils";
 import { Fade } from "react-awesome-reveal";
@@ -50,9 +50,12 @@ export default function OurSolutionsSection() {
     <section className="py-16 bg-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <Fade direction="left" duration={800} cascade damping={0.5} triggerOnce>
-          <h3 className="text-3xl font-bold text-primary mb-12">
+                    <div className="mb-12">
+            <h3 className="text-3xl md:text-4xl font-extrabold text-primary tracking-wide mb-2">
             Our Solutions
-          </h3>
+            </h3>
+            <div className="w-24 h-[3px] bg-primary mx-auto" />
+          </div>
         </Fade>
 
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
@@ -75,16 +78,18 @@ export default function OurSolutionsSection() {
           </Fade>
         </div>
 
+        {/* Button */}
         <Fade direction="left" duration={800} triggerOnce>
           <div className="mt-12">
             <Link
               to="/ourSolutions"
               className={cn(
-                "inline-block text-md px-6 py-2 rounded-md border border-primary text-primary",
-                "hover:bg-primary hover:text-white transition-colors duration-300 font-semibold"
+                "inline-flex items-center gap-2 text-md px-6 py-2 rounded-md border border-primary text-primary",
+                "hover:bg-primary hover:text-white transition-all duration-300 font-semibold group"
               )}
             >
               More Details
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>
         </Fade>

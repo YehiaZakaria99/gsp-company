@@ -52,13 +52,16 @@ export default function AboutSection() {
             damping={0.5}
             triggerOnce
           >
-            <h3 className="font-bold text-3xl text-primary text-center">
-              About Us
-            </h3>
-            <p className="text-center max-w-96 mx-auto font-semibold my-6 md:text-lg text-primary/90">
-              Gulf Seas For Pipes. (GSP) since 1991 commits to provide
-              comprehensive top-quality services to its community.
-            </p>
+            <div className="mb-12">
+              <h3 className="text-3xl md:text-4xl font-extrabold text-primary tracking-wide mb-2">
+                About Us
+              </h3>
+              <div className="w-24 h-[3px] bg-primary mx-auto" />
+              <p className="text-center max-w-96 mx-auto font-semibold my-6 md:text-lg text-primary/90">
+                Gulf Seas For Pipes. (GSP) since 1991 commits to provide
+                comprehensive top-quality services to its community.
+              </p>
+            </div>
           </Fade>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
